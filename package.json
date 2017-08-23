@@ -2,6 +2,7 @@
   "name": "therapist",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
