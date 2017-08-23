@@ -15,32 +15,35 @@ const mkOpts = {
   },
 };
 
-console.log('mkOpts', mkOpts);
 const styles = theme => ({ image: { maxWidth: '90%' }});
 const Styled = withStyles(styles);
-const About = ({ classes }) =>
-  (<Grid container justify="center" align="center">
-    <Grid item xs={9}>
-      <Card>
-        <CardContent>
-          <Text color="secondary">
-            <MarkdownPreview value={quote} {...mkOpts} />
-          </Text>
-        </CardContent>
-        <CardContent>
-          <Grid container justify="center" align="center">
-            <Grid item xs={6} sm={4}>
-              <img className={classes.image} src="/images/headshot.jpg" />
+const About = ({ classes }) => {
+  console.log('classes', classes);
+  return (
+    <Grid container justify="center" align="center">
+      <Grid item xs={9}>
+        <Card>
+          <CardContent>
+            <Text color="secondary">
+              <MarkdownPreview value={quote} {...mkOpts} />
+            </Text>
+          </CardContent>
+          <CardContent>
+            <Grid container justify="center" align="center">
+              <Grid item xs={6} sm={4}>
+                <img className={classes.image} src="/images/headshot.jpg" />
+              </Grid>
+              <Grid item xs={6} sm>
+                <Text color="secondary">
+                  <MarkdownPreview value={bio} {...mkOpts} />
+                </Text>
+              </Grid>
             </Grid>
-            <Grid item xs={6} sm>
-              <Text color="secondary">
-                <MarkdownPreview value={bio} {...mkOpts} />
-              </Text>
-            </Grid>
-          </Grid>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      </Grid>}
     </Grid>
-  </Grid>);
+  );
+};
 
 export default Styled(About);

@@ -6,7 +6,7 @@ import { compose, withHandlers, withState } from 'recompose';
 
 const links = [
   { pathname: '/', label: 'Natasha Edwards' },
-  { pathname: '/', label: 'about' },
+  { pathname: '/about', label: 'about' },
   { pathname: '/', label: 'services' },
   { pathname: '/', label: 'spiritualty' },
   { pathname: '/', label: 'contact' },
