@@ -14,31 +14,11 @@ const links = [
   { pathname: '/', label: 'spiritualty' },
   { pathname: '/', label: 'contact' },
 ];
-const Nav = props =>
-  (<AppBar>
-    <Toolbar>
-      <Grid container justify="center" align="center">
-        {links.map(l =>
-          (<Grid item xs>
-            <Link to={l.pathname}>
-              <Text type="headline" color="secondary">
-                {l.label}
-              </Text>
-            </Link>
-          </Grid>)
-        )}
-      </Grid>
-    </Toolbar>
-  </AppBar>);
 
 const defProps = { location: '/', index: 0 };
 
 const withIndex = compose(
-  withState(
-    'index',
-    'setIndex',
-    ({ index, location } = defProps) => index || 0
-  ),
+  withState('index', 'setIndex', ({ index } = defProps) => index || 0),
   withHandlers({
     set: ({ setIndex }) => (e, i) => setIndex(i),
     changeSet: ({ setIndex }) => i => setIndex(i),
@@ -61,5 +41,3 @@ const TabNav = ({ index, hPush, set } = defProps) =>
   </AppBar>);
 
 export default withRouter(withIndex(TabNav));
-
-// export default Nav;
