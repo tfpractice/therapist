@@ -30,7 +30,7 @@ const TabNav = ({ index, hPush, set } = defProps) =>
   (<AppBar>
     <Tabs
       centered
-      index={index}
+      value={index}
       scrollButtons="on"
       textColor="#fff"
       indicatorColor="#f0f"
