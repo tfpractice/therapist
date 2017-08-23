@@ -1,10 +1,17 @@
 import createPalette from 'material-ui/styles/palette';
 import { createMuiTheme } from 'material-ui/styles/';
 import cyan from 'material-ui/colors/cyan';
+import blueGrey from 'material-ui/colors/blueGrey';
 import grey from 'material-ui/colors/grey';
 
-const palette = createPalette({ primary: cyan, accent: grey, type: 'light' });
+const palette = createPalette({
+  primary: blueGrey,
+  accent: cyan,
+  type: 'dark',
+});
 
-const theme = createMuiTheme({ palette });
+const cardBack = 'rgba(48,48,48,0.8)';
+
+const theme = createMuiTheme({ palette, cardBack });
 
 export default theme;

@@ -8,17 +8,23 @@ import Card, { CardMedia, CardHeader, CardContent } from 'material-ui/Card';
 import { mkOpts } from '../../utils';
 import { bio, quote } from './about';
 
-const styles = theme => ({ image: { maxWidth: '90%' }});
+const styles = (theme) => {
+  console.log('theme', theme);
+  return {
+    image: { maxWidth: '90%' },
+    card: { backgroundColor: theme.cardBack },
+  };
+};
 const sheet = { name: 'About' };
 const Styled = withStyles(styles, sheet);
 
 const About = ({ classes }) =>
   (<Grid container justify="center" align="center">
     <Grid item xs={9}>
-      <Card>
+      <Card className={classes.card}>
         <CardHeader subheader={<MarkdownPreview value={quote} {...mkOpts} />} />
         <CardContent>
-          <Grid container justify="center" align="center">
+          <Grid container justify="center" align="center" spacing={8}>
             <Grid item xs={11} sm={4}>
               <img className={classes.image} src="/images/headshot.jpg" />
             </Grid>
@@ -30,7 +36,7 @@ const About = ({ classes }) =>
           </Grid>
         </CardContent>
       </Card>
-    </Grid>}
+    </Grid>
   </Grid>);
 
 export default Styled(About);

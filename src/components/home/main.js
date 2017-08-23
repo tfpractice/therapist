@@ -1,12 +1,50 @@
 import React from 'react';
 import Grid from 'material-ui/Grid';
+import Text from 'material-ui/Typography';
+import { MarkdownPreview } from 'react-marked-markdown';
+import withStyles from 'material-ui/styles/withStyles';
+import Avatar from 'material-ui/Avatar';
 
-const Main = props =>
+import Card, { CardMedia, CardHeader, CardContent } from 'material-ui/Card';
+
+import { mkOpts } from '../../utils';
+import { sartre, mainQuote, mission } from './home';
+
+const styles = theme => ({
+  image: { height: '20rem', maxHeight: '20rem' },
+  card: { backgroundColor: 'rgba(48,48,48,0.8)' },
+});
+const sheet = { name: 'About' };
+const Styled = withStyles(styles, sheet);
+
+const Home = ({ classes }) =>
   (<Grid container justify="center" align="center">
-    <Grid item xs={6} sm={4}>
-      img here
-    </Grid>
-    <Grid item xs={6} sm>
-      text here
+    <Grid item xs={11}>
+      <Card className={classes.card}>
+        <CardHeader
+          avatar={<Avatar src="/images/headshot.jpg" />}
+          title="Natasha L. Edwards, MA, LMHC, NCC"
+          subheader="M.A. Applied Psychology, M.A. Womens & Gender Studies"
+        />
+
+        <CardMedia className={classes.image} image="/images/city.jpg" />
+
+        <CardContent>
+          <Grid container spacing={8}>
+            <Grid item xs={11} sm>
+              <Text component={CardContent} color="secondary">
+                <MarkdownPreview value={sartre} {...mkOpts} />
+              </Text>
+            </Grid>
+            <Grid item xs={11} sm={8}>
+              <Text component={CardContent} align="justify" color="secondary">
+                <MarkdownPreview value={mission} {...mkOpts} />
+              </Text>
+            </Grid>
+          </Grid>
+        </CardContent>
+      </Card>
     </Grid>
   </Grid>);
+
+export default Styled(Home);
