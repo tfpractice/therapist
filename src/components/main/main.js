@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import Grid from 'material-ui/Grid';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Text from 'material-ui/Typography';
-import { createStyleSheet, withStyles } from 'material-ui/styles';
+import { withStyles } from 'material-ui/styles';
+
+import Home from '../home';
+import About from '../about';
 import Nav from './nav';
 import logo from './logo.svg';
 import './App.css';
 
+const mainStyles = theme => ({ main: { marginTop: '3rem' }});
+const Styled = withStyles(mainStyles, { name: 'Home' });
 const Main = (props) => {
   console.log('props', props);
   return (
@@ -14,11 +19,14 @@ const Main = (props) => {
       <Grid item xs={12}>
         <Nav />
       </Grid>
-      <Grid item xs>
-        <Text>Welcome to React</Text>
+      <Grid item xs className={props.classes.main}>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+        </Switch>
       </Grid>
     </Grid>
   );
 };
 
-export default Main;
+export default Styled(Main);
