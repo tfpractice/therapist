@@ -1,8 +1,5 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
-import Grid from 'material-ui/Grid';
-import Text from 'material-ui/Typography';
-import Toolbar from 'material-ui/Toolbar';
 import { Link, withRouter } from 'react-router-dom';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import { compose, withHandlers, withState } from 'recompose';
