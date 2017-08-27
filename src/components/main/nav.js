@@ -9,7 +9,7 @@ const links = [
   { pathname: '/about', label: 'about' },
   { pathname: '/', label: 'services' },
   { pathname: '/', label: 'spiritualty' },
-  { pathname: '/', label: 'contact' },
+  { pathname: '/contact', label: 'contact' },
 ];
 
 const defProps = { location: '/', index: 0 };

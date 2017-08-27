@@ -11,7 +11,11 @@ import { mkOpts } from '../../utils';
 import { sartre, mainQuote, mission } from './home';
 
 const styles = theme => ({
-  image: { height: '20rem', maxHeight: '20rem' },
+  image: {
+    height: '20rem',
+    maxHeight: '20rem',
+    backgroundPosition: 'center',
+  },
   card: { backgroundColor: 'rgba(48,48,48,0.8)' },
 });
 const sheet = { name: 'About' };
@@ -27,7 +31,7 @@ const Home = ({ classes }) =>
           subheader="M.A. Applied Psychology, M.A. Womens & Gender Studies"
         />
 
-        <CardMedia className={classes.image} image="/images/city.jpg" />
+        <CardMedia className={classes.image} image="/images/cityscape.png" />
 
         <CardContent>
           <Grid container spacing={8}>
