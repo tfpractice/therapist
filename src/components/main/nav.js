@@ -4,10 +4,12 @@ import { Link, withRouter } from 'react-router-dom';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import { compose, withHandlers, withState } from 'recompose';
 
+import Services from '../services';
+
 const links = [
   { pathname: '/', label: 'Natasha Edwards' },
   { pathname: '/about', label: 'about' },
-  { pathname: '/', label: 'services' },
+  { pathname: '/', label: <Services /> },
   { pathname: '/', label: 'spiritualty' },
   { pathname: '/contact', label: 'contact' },
 ];
