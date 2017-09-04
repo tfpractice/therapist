@@ -6,15 +6,6 @@ import { compose, withHandlers, withState } from 'recompose';
 
 import Services from '../services';
 
-const links = [
-  { pathname: '/', label: 'Natasha Edwards' },
-  { pathname: '/about', label: 'about' },
-  { pathname: '/', label: <Services /> },
-  { pathname: '/spirituality', label: 'spiritualty' },
-  { pathname: '/diversity', label: 'diversity' },
-  { pathname: '/contact', label: 'contact' },
-];
-
 const defProps = { location: '/', index: 0 };
 
 const withIndex = compose(
@@ -26,18 +17,32 @@ const withIndex = compose(
   })
 );
 
-const TabNav = ({ index, hPush, set } = defProps) =>
-  (<AppBar>
-    <Tabs
-      centered
-      value={index}
-      scrollButtons="on"
-      textColor="#fff"
-      indicatorColor="#f0f"
-      onChange={set}
-    >
-      {links.map(l => <Tab key={l.label} label={l.label} onClick={hPush(l)} />)}
-    </Tabs>
-  </AppBar>);
+const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => {
+  console.log('rest', rest, match);
+  const links = [
+    { pathname: location.pathname, label: 'Natasha Edwards' },
+    { pathname: '/about', label: 'about' },
+    { pathname: location.pathname, label: <Services /> },
+    { pathname: location.pathname, label: 'blog' },
+    { pathname: '/contact', label: 'contact' },
+  ];
+
+  return (
+    <AppBar>
+      <Tabs
+        centered
+        value={index}
+        scrollButtons="on"
+        textColor="#fff"
+        indicatorColor="#f0f"
+        onChange={set}
+      >
+        {links.map(l =>
+          <Tab key={l.label} label={l.label} onClick={hPush(l)} />
+        )}
+      </Tabs>
+    </AppBar>
+  );
+};
 
 export default withRouter(withIndex(TabNav));

@@ -19,7 +19,7 @@ const Main = (props) => {
   return (
     <Grid container justify="center" align="center">
       <Grid item xs={12}>
-        <Nav />
+        <Route component={Nav} />
       </Grid>
       <Grid item xs className={props.classes.main}>
         <Switch>

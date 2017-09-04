@@ -20,7 +20,7 @@ const Styled = withStyles(styles, sheet);
 
 const About = ({ classes }) =>
   (<Grid container justify="center" align="center">
-    <Grid item xs={9}>
+    <Grid item xs={11}>
       <Card className={classes.card}>
         <CardHeader subheader={<MarkdownPreview value={quote} {...mkOpts} />} />
         <CardContent>
