@@ -15,7 +15,9 @@ In essence, the successful training and development of a multicultural workforce
 export const spirituality = `
 ## Spirituality
 Nearly 80 percent of Americans say they practice some type of religion according to a 2012 Pew Research Center study. Whether a person is religious, spiritual or neither, religion has a major influence on culture and widely shapes how we see the world and process ourselves and our existence. 
+
 There is a substantial body of experience that supports the use of spirituality and religion in relation to one’s mental health from day to day purpose, decreasing symptoms of illness, and support and opposition to isolation. Many people who incorporate faith and spirituality into daily practice reported feeling more productive, feeling more engaged in community activities, and having a higher quality of life than those who reported a loss of faith in the same year.
+
 Incorporating spirituality in therapy can be very beneficial particularly when dealing with major life stressors such as trauma, natural disaster, and illness, loss of loved ones, divorce and serious mental illness. Many studies and personal practice show that religion and spirituality are generally helpful to people in coping, especially people with the fewest resources facing the most uncontrollable of problems. Along with other therapeutic modalities together we can develop coping methods include spiritual support, practices to facilitate life transitions, spiritual forgiveness, support from a religious institution or ministry, and reframing a stressful situation into a compassionate structure of meaning. 
 `;
 

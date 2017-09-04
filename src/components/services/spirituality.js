@@ -30,7 +30,6 @@ const Styled = withStyles(styles);
 const Spirituality = ({ classes }) =>
   (<Grid container justify="center" align="center">
     <Grid item xs={12}>
-      {/* <Card className={classes.card}> */}
       <GridListTile className={classes.item}>
         <CardMedia className={classes.image} image="/images/bigSky.jpg" />
 
@@ -43,23 +42,22 @@ const Spirituality = ({ classes }) =>
           }
         />
       </GridListTile>
-      {/* </Card> */}
     </Grid>
     <Grid item xs={11}>
       <CardContent>
-        <Grid container>
-          <Grid item xs={6}>
+        <Grid container justify="center">
+          <Grid item sm={12} md={6}>
             <Card className={classes.card}>
-              <Text type="h2" component={CardContent} color="secondary">
+              <Text type="headline" component={CardContent} color="secondary">
                 <MarkdownPreview value={spirituality} {...mkOpts} />
               </Text>
             </Card>
           </Grid>
 
-          <Grid item xs={6}>
+          <Grid item sm={12} md={6}>
             <Card className={classes.card}>
               <Text
-                type="h2"
+                type="headline"
                 component={CardContent}
                 align="justify"
                 color="secondary"

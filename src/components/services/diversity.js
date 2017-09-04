@@ -26,30 +26,28 @@ const Styled = withStyles(styles, sheet);
 
 const Diversity = ({ classes }) =>
   (<Grid container justify="center" align="center">
-    <Grid item xs={11}>
-      <Card className={classes.card}>
-        <GridListTile className={classes.item}>
-          <CardMedia className={classes.image} image="/images/tree.jpg" />
+    <Grid item xs={12}>
+      <GridListTile className={classes.item}>
+        <CardMedia className={classes.image} image="/images/tree.jpg" />
 
-          <GridListTileBar
-            titlePosition="top"
-            title={
-              <Text type="headline" align="center">
-                Diversity, Multiculturalism, & Inclusion in the Workplace
-              </Text>
-            }
-          />
-        </GridListTile>
-        <CardContent>
-          <Grid container justify="center" align="center" spacing={8}>
-            <Grid item xs={11} sm>
-              <Text type="headline" component={CardContent} color="secondary">
-                <MarkdownPreview value={diversity} {...mkOpts} />
-              </Text>
-            </Grid>
-          </Grid>
-        </CardContent>
-      </Card>
+        <GridListTileBar
+          titlePosition="top"
+          title={
+            <Text type="headline" align="center">
+              Diversity, Multiculturalism, & Inclusion in the Workplace
+            </Text>
+          }
+        />
+      </GridListTile>
+    </Grid>
+    <Grid item xs={11}>
+      <CardContent>
+        <Card className={classes.card}>
+          <Text type="headline" component={CardContent} color="secondary">
+            <MarkdownPreview value={diversity} {...mkOpts} />
+          </Text>
+        </Card>
+      </CardContent>
     </Grid>
   </Grid>);
 
