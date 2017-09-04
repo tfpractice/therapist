@@ -20,7 +20,7 @@ const withIndex = compose(
 const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => {
   console.log('rest', rest, match);
   const links = [
-    { pathname: location.pathname, label: 'Natasha Edwards' },
+    { pathname: '/', label: 'Natasha Edwards' },
     { pathname: '/about', label: 'about' },
     { pathname: location.pathname, label: <Services /> },
     { pathname: location.pathname, label: 'blog' },

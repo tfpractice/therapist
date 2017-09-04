@@ -34,14 +34,20 @@ const Home = ({ classes }) =>
         <CardMedia className={classes.image} image="/images/cityscape.png" />
 
         <CardContent>
-          <Grid container spacing={8}>
+          <Grid container align="center" spacing={8}>
             <Grid item xs={11} sm>
-              <Text component={CardContent} color="secondary">
+              <Text type="headline" component={CardContent} color="secondary">
                 <MarkdownPreview value={sartre} {...mkOpts} />
               </Text>
             </Grid>
             <Grid item xs={11} sm={8}>
-              <Text component={CardContent} align="justify" color="secondary">
+              <Text
+                type="headline"
+                component={CardContent}
+
+                // align="justify"
+                color="secondary"
+              >
                 <MarkdownPreview value={mission} {...mkOpts} />
               </Text>
             </Grid>

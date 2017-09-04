@@ -17,6 +17,11 @@ const styles = theme => ({
     backgroundPosition: 'center',
     backgroundSize: 'cover',
   },
+  container: {
+    backgroundImage: `url('/images/bigSky.jpg')`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+  },
   card: { backgroundColor: 'rgba(48,48,48,0.8)' },
 });
 const sheet = { name: 'About' };
@@ -24,48 +29,47 @@ const Styled = withStyles(styles);
 
 const Spirituality = ({ classes }) =>
   (<Grid container justify="center" align="center">
-    <Grid item xs={11}>
-      <Card className={classes.card}>
-        <GridListTile className={classes.item}>
-          <CardMedia className={classes.image} image="/images/bigSky.jpg" />
+    <Grid item xs={12}>
+      {/* <Card className={classes.card}> */}
+      <GridListTile className={classes.item}>
+        <CardMedia className={classes.image} image="/images/bigSky.jpg" />
 
-          <GridListTileBar title="Spirituality" />
-        </GridListTile>
-
-        {/* <CardContent>
-          <Grid container spacing={8}>
-            <Grid item xs={11} sm>
-          <Text component={CardContent} color="secondary">
-          <MarkdownPreview value={spirituality} {...mkOpts} />
-          </Text>
-            </Grid>
-            <Grid item xs={11} sm>
-          <Text component={CardContent} align="justify" color="secondary">
-          <MarkdownPreview value={churchHurt} {...mkOpts} />
-          </Text>
-            </Grid>
-          </Grid>
-        </CardContent> */}
-      </Card>
+        <GridListTileBar
+          titlePosition="top"
+          title={
+            <Text type="headline" align="center">
+              Spirituality
+            </Text>
+          }
+        />
+      </GridListTile>
+      {/* </Card> */}
     </Grid>
     <Grid item xs={11}>
-      <Grid container>
-        <Grid item xs={6}>
-          <Card className={classes.card}>
-            <Text component={CardContent} color="secondary">
-              <MarkdownPreview value={spirituality} {...mkOpts} />
-            </Text>
-          </Card>
-        </Grid>
+      <CardContent>
+        <Grid container>
+          <Grid item xs={6}>
+            <Card className={classes.card}>
+              <Text type="h2" component={CardContent} color="secondary">
+                <MarkdownPreview value={spirituality} {...mkOpts} />
+              </Text>
+            </Card>
+          </Grid>
 
-        <Grid item xs={6}>
-          <Card className={classes.card}>
-            <Text component={CardContent} align="justify" color="secondary">
-              <MarkdownPreview value={churchHurt} {...mkOpts} />
-            </Text>
-          </Card>
+          <Grid item xs={6}>
+            <Card className={classes.card}>
+              <Text
+                type="h2"
+                component={CardContent}
+                align="justify"
+                color="secondary"
+              >
+                <MarkdownPreview value={churchHurt} {...mkOpts} />
+              </Text>
+            </Card>
+          </Grid>
         </Grid>
-      </Grid>
+      </CardContent>
     </Grid>
   </Grid>);
 

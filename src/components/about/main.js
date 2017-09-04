@@ -22,14 +22,20 @@ const About = ({ classes }) =>
   (<Grid container justify="center" align="center">
     <Grid item xs={11}>
       <Card className={classes.card}>
-        <CardHeader subheader={<MarkdownPreview value={quote} {...mkOpts} />} />
+        <CardHeader
+          subheader={
+            <Text type="headline">
+              <MarkdownPreview value={quote} {...mkOpts} />
+            </Text>
+          }
+        />
         <CardContent>
           <Grid container justify="center" align="center" spacing={8}>
             <Grid item xs={11} sm={4}>
               <img className={classes.image} src="/images/headshot.jpg" />
             </Grid>
             <Grid item xs={11} sm>
-              <Text component={CardContent} color="secondary">
+              <Text type="headline" component={CardContent} color="secondary">
                 <MarkdownPreview value={bio} {...mkOpts} />
               </Text>
             </Grid>
