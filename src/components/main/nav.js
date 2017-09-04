@@ -10,7 +10,8 @@ const links = [
   { pathname: '/', label: 'Natasha Edwards' },
   { pathname: '/about', label: 'about' },
   { pathname: '/', label: <Services /> },
-  { pathname: '/', label: 'spiritualty' },
+  { pathname: '/spirituality', label: 'spiritualty' },
+  { pathname: '/diversity', label: 'diversity' },
   { pathname: '/contact', label: 'contact' },
 ];
 
