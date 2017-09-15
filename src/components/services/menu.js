@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Button from 'material-ui/Button';
+import IconButton from 'material-ui/IconButton';
+import MenuIcon from 'material-ui-icons/Menu';
 import Menu, { MenuItem } from 'material-ui/Menu';
 import { withState, withHandlers, compose } from 'recompose';
 import { Link } from 'react-router-dom';
@@ -18,8 +20,8 @@ const withBoth = compose(
     },
   })
 );
-const Services = ({ open, anchorEl, toggle, onClick }) =>
-  (<div>
+const Services = ({ open, anchorEl, toggle, onClick }) => (
+  <div>
     <Button
       aria-owns={open ? 'simple-menu' : null}
       aria-haspopup="true"
@@ -40,6 +42,7 @@ const Services = ({ open, anchorEl, toggle, onClick }) =>
         <Link to="/spirituality">Sprituality</Link>
       </MenuItem>
     </Menu>
-  </div>);
+  </div>
+);
 
 export default withBoth(Services);
