@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from 'material-ui/Grid';
 import Text from 'material-ui/Typography';
 import { MarkdownPreview } from 'react-marked-markdown';
+import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import withStyles from 'material-ui/styles/withStyles';
 import Avatar from 'material-ui/Avatar';
 
@@ -16,13 +17,21 @@ const styles = theme => ({
     maxHeight: '20rem',
     backgroundPosition: 'center',
   },
+  media: {
+    backgroundColor: '#fff',
+    height: '20rem',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    '&:hover': { backgroundSize: 'contain' },
+  },
   card: { backgroundColor: 'rgba(48,48,48,0.8)' },
 });
 const sheet = { name: 'About' };
 const Styled = withStyles(styles, sheet);
 
-const Home = ({ classes }) =>
-  (<Grid container justify="center" align="center">
+const Home = ({ classes }) => (
+  <Grid container justify="center" align="center">
     <Grid item xs={11}>
       <Card className={classes.card}>
         <CardHeader
@@ -30,24 +39,31 @@ const Home = ({ classes }) =>
           title="Natasha L. Edwards, MA, LMHC, NCC"
           subheader="M.A. Applied Psychology, M.A. Womens & Gender Studies"
         />
+        <GridListTile className={classes.item}>
+          <CardMedia
+            className={classes.media}
+            image="/images/cityscape.png"
+            alt="samaple"
+          />
 
-        <CardMedia className={classes.image} image="/images/cityscape.png" />
-
-        <CardContent>
-          <Grid container align="center" spacing={8}>
-            <Grid item xs={11} sm>
-              <Text type="headline" component={CardContent} color="secondary">
-                <MarkdownPreview value={sartre} {...mkOpts} />
-              </Text>
-            </Grid>
-            <Grid item xs={11} sm={8}>
+          <GridListTileBar
+            title={
               <Text
                 type="headline"
+                align="center"
                 component={CardContent}
-
-                // align="justify"
                 color="secondary"
               >
+                <MarkdownPreview value={sartre} {...mkOpts} />
+              </Text>
+            }
+          />
+        </GridListTile>
+
+        <CardContent>
+          <Grid container justify="center">
+            <Grid item xs={9}>
+              <Text type="headline" component={CardContent} color="secondary">
                 <MarkdownPreview value={mission} {...mkOpts} />
               </Text>
             </Grid>
@@ -55,6 +71,7 @@ const Home = ({ classes }) =>
         </CardContent>
       </Card>
     </Grid>
-  </Grid>);
+  </Grid>
+);
 
 export default Styled(Home);
