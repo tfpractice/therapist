@@ -3,8 +3,15 @@ import Grid from 'material-ui/Grid';
 import Text from 'material-ui/Typography';
 import Swipable from 'react-swipeable-views';
 import withStyles from 'material-ui/styles/withStyles';
-import Card, { CardMedia, CardHeader, CardContent } from 'material-ui/Card';
+import Card, {
+  CardMedia,
+  CardHeader,
+  CardActions,
+  CardContent,
+} from 'material-ui/Card';
+import Button from 'material-ui/Button';
 
+import { send, testMsg } from '../../utils';
 import { address, quote, email } from './content';
 import Map from './map';
 
@@ -36,6 +43,9 @@ const Contact = ({ classes }) => (
         </Grid>
 
         <CardHeader title={email} />
+        <CardActions>
+          <Button onClick={() => send(testMsg)}>send test</Button>
+        </CardActions>
       </Card>
     </Grid>
   </Grid>
