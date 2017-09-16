@@ -11,7 +11,6 @@ import Card, {
 } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 
-import { send, testMsg } from '../../utils';
 import { address, quote, email } from './content';
 import Map from './map';
 
@@ -43,9 +42,6 @@ const Contact = ({ classes }) => (
         </Grid>
 
         <CardHeader title={email} />
-        <CardActions>
-          <Button onClick={() => send(testMsg)}>send test</Button>
-        </CardActions>
       </Card>
     </Grid>
   </Grid>

@@ -8,7 +8,8 @@ import Home from '../home';
 import About from '../about';
 import Contact from '../contact';
 import { Diversity, Spirituality } from '../services';
-import Blog from '../blog'; import Nav from './nav';
+import Blog from '../blog';
+import Nav from './nav';
 import logo from './logo.svg';
 
 import './App.css';
