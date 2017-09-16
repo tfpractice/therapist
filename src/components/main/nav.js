@@ -23,7 +23,7 @@ const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => {
     { pathname: '/', label: 'Natasha Edwards' },
     { pathname: '/about', label: 'about' },
     { pathname: location.pathname, label: <Services /> },
-    { pathname: location.pathname, label: 'blog' },
+    { pathname: '/blog', label: 'blog' },
     { pathname: '/contact', label: 'contact' },
   ];
 
@@ -37,9 +37,9 @@ const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => {
         indicatorColor="#f0f"
         onChange={set}
       >
-        {links.map(l =>
+        {links.map(l => (
           <Tab key={l.label} label={l.label} onClick={hPush(l)} />
-        )}
+        ))}
       </Tabs>
     </AppBar>
   );

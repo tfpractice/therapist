@@ -8,8 +8,9 @@ import Home from '../home';
 import About from '../about';
 import Contact from '../contact';
 import { Diversity, Spirituality } from '../services';
-import Nav from './nav';
+import Blog from '../blog'; import Nav from './nav';
 import logo from './logo.svg';
+
 import './App.css';
 
 const mainStyles = theme => ({ main: { marginTop: '3rem' }});
@@ -27,6 +28,7 @@ const Main = (props) => {
           <Route path="/about" component={About} />
           <Route path="/diversity" component={Diversity} />
           <Route path="/spirituality" component={Spirituality} />
+          <Route path="/blog" component={Blog} />
           <Route path="/contact" component={Contact} />
         </Switch>
       </Grid>

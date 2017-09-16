@@ -6,6 +6,7 @@ import withStyles from 'material-ui/styles/withStyles';
 import Card, { CardMedia, CardHeader, CardContent } from 'material-ui/Card';
 
 import { mkOpts } from '../../utils';
+import Blog from '../blog';
 import { bio, quote } from './about';
 
 const styles = (theme) => {
@@ -18,8 +19,8 @@ const styles = (theme) => {
 const sheet = { name: 'About' };
 const Styled = withStyles(styles, sheet);
 
-const About = ({ classes }) =>
-  (<Grid container justify="center" align="center">
+const About = ({ classes }) => (
+  <Grid container justify="center" align="center">
     <Grid item xs={11}>
       <Card className={classes.card}>
         <CardHeader
@@ -43,6 +44,7 @@ const About = ({ classes }) =>
         </CardContent>
       </Card>
     </Grid>
-  </Grid>);
+  </Grid>
+);
 
 export default Styled(About);
