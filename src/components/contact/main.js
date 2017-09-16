@@ -10,7 +10,7 @@ import Card, {
   CardContent,
 } from 'material-ui/Card';
 import Button from 'material-ui/Button';
-
+import { send } from '../../utils';
 import { address, quote, email } from './content';
 import Map from './map';
 
@@ -42,6 +42,9 @@ const Contact = ({ classes }) => (
         </Grid>
 
         <CardHeader title={email} />
+        <CardActions>
+          <Button onClick={() => send()}>SEND MAIL</Button>
+        </CardActions>
       </Card>
     </Grid>
   </Grid>

@@ -1,3 +1,9 @@
+import apostle from 'apostle.io';
+
+const key = process.env.REACT_APP_NEDWARDS_APOSTLE_KEY;
+
+apostle.domainKey = key;
+
 // // const sgMail = require('@sendgrid/mail');
 // import sgMail from '@sendgrid/mail';
 //
@@ -34,8 +40,29 @@
 //
 // //
 // // console.log('sgMail', sgMail);
-//
-// export const send = msg => sgMail.send(msg);
+
+const testMessage = `Hey Natasha,
+It's theory, I've hacked together a quick email solution that doesnt require
+ the wild amount of server set-up that most services Require. This comes with 
+ some default branding, but has been sent from your website successfully. I've
+semt this email to send to your email address so you can see it working, but I'm gonna test/update it with 
+my aemail address.
+
+You can test it out on your site at natasha-edwards.surge.sh if you go to the 
+contact page and click send. Dont do it too much, tho, becuase it'll just send
+ this template to me over and over again and gmail might block it for spam or something.
+ 
+ Im glad you like the site so far and I hope this solution can last as it might
+ shave a good week of our timeline.
+ 
+ TTYL <3,
+ tfpractice
+`;
+
+export const send = msg =>
+  apostle.deliver('welcome', { email: 'jackson.brebnor@gmail.com' });
+
+// sgMail.send(msg);
 //
 // // axios.post(url, { data: dMail, headers }).then(console.log);
 //
