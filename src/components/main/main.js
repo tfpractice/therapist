@@ -15,7 +15,9 @@ import logo from './logo.svg';
 import './App.css';
 
 const mainStyles = theme => ({ main: { marginTop: '3rem' }});
-const Styled = withStyles(mainStyles, { name: 'Home' });
+
+const Styled = withStyles(mainStyles,
+  { name: 'Home' });
 const Main = (props) => {
   console.log('props', props);
   return (
