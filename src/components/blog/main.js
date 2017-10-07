@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid from 'material-ui/Grid';
+import Fade from 'material-ui/transitions/Fade';
 import { withStyles } from 'material-ui/styles';
 
 import { articles } from './content';
@@ -13,20 +14,22 @@ const styles = theme => ({
 const Styled = withStyles(styles);
 
 const BlogView = () => (
-  <Grid container justify="center" spacing={24}>
-    <Grid item xs={12}>
-      Blog
-    </Grid>
-    <Grid item xs={11}>
-      <Grid container justify="center" spacing={24}>
-        {articles.map((prod, i) => (
-          <Grid item xs={6} md={3} key={i}>
-            <BlogCard article={prod} />
-          </Grid>
-        ))}
+  <Fade in>
+    <Grid container justify="center" spacing={24}>
+      <Grid item xs={12}>
+        Blog
+      </Grid>
+      <Grid item xs={11}>
+        <Grid container justify="center" spacing={24}>
+          {articles.map((prod, i) => (
+            <Grid item xs={6} md={3} key={i}>
+              <BlogCard article={prod} />
+            </Grid>
+          ))}
+        </Grid>
       </Grid>
     </Grid>
-  </Grid>
+  </Fade>
 );
 
 export default Styled(BlogView);

@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid from 'material-ui/Grid';
+import Fade from 'material-ui/transitions/Fade';
 import Swipable from 'react-swipeable-views';
 import withStyles from 'material-ui/styles/withStyles';
 import Card, {
@@ -26,25 +27,27 @@ const sheet = { name: 'Contact' };
 const Styled = withStyles(styles, sheet);
 
 const Contact = ({ classes }) => (
-  <Grid container justify="center" align="center">
-    <Grid item xs={9}>
-      <Card className={classes.card}>
-        <CardHeader title={quote} subheader="― Shannon L. Alder" />
-        <Grid container justify="center" align="center">
-          <Grid item xs={12}>
-            <Swipable disabled index={0} ignoreNativeScroll>
-              <Map />
-            </Swipable>
+  <Fade in>
+    <Grid container justify="center" align="center">
+      <Grid item xs={9}>
+        <Card className={classes.card}>
+          <CardHeader title={quote} subheader="― Shannon L. Alder" />
+          <Grid container justify="center" align="center">
+            <Grid item xs={12}>
+              <Swipable disabled index={0} ignoreNativeScroll>
+                <Map />
+              </Swipable>
+            </Grid>
           </Grid>
-        </Grid>
 
-        <CardHeader title={email} />
-        <CardActions>
-          <Button onClick={() => send()}>SEND MAIL</Button>
-        </CardActions>
-      </Card>
+          <CardHeader title={email} />
+          <CardActions>
+            <Button onClick={() => send()}>SEND MAIL</Button>
+          </CardActions>
+        </Card>
+      </Grid>
     </Grid>
-  </Grid>
+  </Fade>
 );
 
 export default Styled(Contact);

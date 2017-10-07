@@ -1,6 +1,7 @@
 import React from 'react';
 import Grid from 'material-ui/Grid';
 import Text from 'material-ui/Typography';
+import Fade from 'material-ui/transitions/Fade';
 import { MarkdownPreview } from 'react-marked-markdown';
 import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import withStyles from 'material-ui/styles/withStyles';
