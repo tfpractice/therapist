@@ -23,13 +23,15 @@ const styles = theme => ({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    '&:hover': { backgroundSize: 'contain' },
+    '&:hover': { backgroundSize: 'auto' },
   },
   card: { backgroundColor: 'rgba(48,48,48,0.8)' },
 });
 const sheet = { name: 'About' };
 const Styled = withStyles(styles, sheet);
 
+console.log('sheet', sheet);
+console.log('string');
 const Home = ({ classes }) => (
   <Grid container justify="center" align="center">
     <Grid item xs={11}>

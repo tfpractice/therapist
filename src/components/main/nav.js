@@ -27,6 +27,8 @@ const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => {
     { pathname: '/contact', label: 'contact' },
   ];
 
+  console.log(index, hPush, set, match, location, ...rest);
+
   return (
     <AppBar>
       <Tabs
@@ -38,7 +40,7 @@ const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => {
         onChange={set}
       >
         {links.map(l => (
-          <Tab key={l.label} label={l.label} onClick={hPush(l)} />
+          <Tab key={l.label} label={l.label} href={l.pathname} />
         ))}
       </Tabs>
     </AppBar>

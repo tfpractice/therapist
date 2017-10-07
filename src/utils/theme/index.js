@@ -1,13 +1,15 @@
 import { createMuiTheme } from 'material-ui/styles/';
-import cyan from 'material-ui/colors/cyan';
-import blueGrey from 'material-ui/colors/blueGrey';
-import grey from 'material-ui/colors/grey';
+import { cyan, blueGrey, grey } from 'material-ui/colors';
 
 const primary = blueGrey;
-const accent = cyan;
+const accent = grey;
 const type = 'dark';
 
-const palette = { primary, accent, type };
+const palette = {
+  primary,
+  accent,
+  type,
+};
 
 const cardBack = 'rgba(48,48,48,0.8)';
 
