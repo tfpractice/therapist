@@ -10,21 +10,19 @@ import Card, {
   CardContent,
 } from 'material-ui/Card';
 import Button from 'material-ui/Button';
+
 import { send } from '../../utils';
 import { address, quote, email } from './content';
 import Map from './map';
 
-const styles = (theme) => {
-  console.log('theme', theme);
-  return {
-    image: {
-      height: '20rem',
-      maxHeight: '20rem',
-      backgroundPosition: 'center',
-    },
-    card: { backgroundColor: theme.cardBack },
-  };
-};
+const styles = theme => ({
+  image: {
+    height: '20rem',
+    maxHeight: '20rem',
+    backgroundPosition: 'center',
+  },
+  card: { backgroundColor: theme.cardBack },
+});
 const sheet = { name: 'Contact' };
 const Styled = withStyles(styles, sheet);
 

@@ -1,17 +1,6 @@
 import React from 'react';
 import Grid from 'material-ui/Grid';
-import Toolbar from 'material-ui/Toolbar';
-import Avatar from 'material-ui/Avatar';
-import Button from 'material-ui/Button';
-import Text from 'material-ui/Typography';
-import Heart from 'material-ui-icons/Favorite';
 import { withStyles } from 'material-ui/styles';
-import BottomNavigation, {
-  BottomNavigationButton as NavBtn,
-} from 'material-ui/BottomNavigation';
-import { CardActions } from 'material-ui/Card';
-import { compose, withHandlers, withState } from 'recompose';
-import { connect } from 'react-redux';
 
 import { articles } from './content';
 import BlogCard from './link';

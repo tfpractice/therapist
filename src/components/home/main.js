@@ -30,8 +30,6 @@ const styles = theme => ({
 const sheet = { name: 'About' };
 const Styled = withStyles(styles, sheet);
 
-console.log('sheet', sheet);
-console.log('string');
 const Home = ({ classes }) => (
   <Grid container justify="center" align="center">
     <Grid item xs={11}>

@@ -1,26 +1,12 @@
 import React from 'react';
 import Text from 'material-ui/Typography';
-import Grid from 'material-ui/Grid';
-import Chip from 'material-ui/Chip';
 import Avatar from 'material-ui/Avatar';
 import IconButton from 'material-ui/IconButton';
 import Heart from 'material-ui-icons/Favorite';
-import XHeart from 'material-ui-icons/HighlightOff';
 import { GridListTile, GridListTileBar } from 'material-ui/GridList';
-import Card, {
-  CardActions,
-  CardContent,
-  CardHeader,
-  CardMedia,
-} from 'material-ui/Card';
-import { connect } from 'react-redux';
+import Card, { CardContent, CardHeader, CardMedia } from 'material-ui/Card';
 import { withStyles } from 'material-ui/styles';
 import { Link } from 'react-router-dom';
-
-import { content } from './content';
-
-// const mapState = ({ favorites }, { product }) => ({ isFav: new Set(favorites).has(product.id) });
-// const Connected = connect(mapState, Favorites.actions);
 
 const styles = theme => ({
   item: { listStyle: 'none' },
@@ -40,7 +26,7 @@ const styles = theme => ({
 });
 const Styled = withStyles(styles);
 
-const BlogCard = ({ classes, article }) => (
+const BlogCard = ({ classes }) => (
   <Card className={classes.card}>
     <CardHeader
       avatar={
