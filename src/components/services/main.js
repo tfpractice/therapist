@@ -12,6 +12,7 @@ import { services } from './content';
 import ServCard from './servCard';
 import Spirituality from './spirituality';
 import Diversity from './diversity';
+import Menu from './menu';
 
 const styles = theme => ({
   image: {
@@ -38,6 +39,7 @@ const Services = ({ classes }) => (
                 Services
               </Text>
             }
+            actionIcon={<Menu />}
           />
         </GridListTile>
       </Grid>

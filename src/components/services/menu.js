@@ -34,11 +34,12 @@ const Services = ({ open, anchorEl, toggle, onClick }) => (
       anchorEl={anchorEl}
       open={open}
       onRequestClose={toggle}
+      onClick={toggle}
     >
-      <MenuItem onClick={toggle}>
+      <MenuItem>
         <Link to="/diversity">Multiculturalism</Link>
       </MenuItem>
-      <MenuItem onClick={toggle}>
+      <MenuItem>
         <Link to="/spirituality">Sprituality</Link>
       </MenuItem>
     </Menu>
