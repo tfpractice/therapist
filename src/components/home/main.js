@@ -19,12 +19,12 @@ const styles = theme => ({
     backgroundPosition: 'center',
   },
   media: {
-    backgroundColor: '#fff',
+    backgroundColor: 'transparent',
     height: '20rem',
-    backgroundSize: 'cover',
+    backgroundSize: 'auto',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    '&:hover': { backgroundSize: 'auto' },
+    '&:hover': { backgroundSize: 'cover' },
   },
   card: { backgroundColor: 'rgba(48,48,48,0.8)' },
 });

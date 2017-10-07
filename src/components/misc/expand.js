@@ -7,25 +7,27 @@ import Grid from 'material-ui/Grid';
 import Collapse from 'material-ui/transitions/Collapse';
 import Divider from 'material-ui/Divider';
 import { compose, withHandlers, withState } from 'recompose';
-import { createStyleSheet, withStyles } from 'material-ui/styles';
-
-import { RawPath } from '../visualization';
+import { withStyles } from 'material-ui/styles';
 
 const withSwitch = compose(
   withState('open', 'flip', ({ open = true }) => !!open),
   withHandlers({ toggle: ({ flip }) => () => flip(x => !x) })
 );
 
-const Styled = withStyles(
-  createStyleSheet('Expand', theme => ({
-    Grid: { backgroundColor: 'rgba(0,0,0,0.5)', paddingBottom: '5%' },
-    Header: { backgroundColor: 'rgba(0,0,0,0.5)', boxShadow: 'none' },
-    Divider: { backgroundColor: '#f0f', marginBottom: theme.spacing.unit },
-  }))
-);
+const Styled = withStyles(theme => ({
+  grid: { backgroundColor: theme.cardBack, paddingBottom: '5%' },
+  Header: { backgroundColor: theme.cardBack, boxShadow: 'none' },
+  Divider: { backgroundColor: '#fff', marginBottom: theme.spacing.unit },
+}));
 
-const Expand = ({ open, children, dStyle, toggle, color, header, classes }) =>
-  (<Grid container justify="center" align="center" spacing={0}>
+const Expand = ({ open, children, dStyle, toggle, color, header, classes }) => (
+  <Grid
+    container
+    justify="center"
+    align="center"
+    spacing={0}
+    className={classes.grid}
+  >
     <Grid item xs={11}>
       <Grid container justify="space-between" align="center" spacing={0}>
         <Grid item xs={9} onClick={toggle}>
@@ -43,10 +45,9 @@ const Expand = ({ open, children, dStyle, toggle, color, header, classes }) =>
     </Grid>
 
     <Grid item xs={11}>
-      <Collapse in={open}>
-        {children}
-      </Collapse>
+      <Collapse in={open}>{children}</Collapse>
     </Grid>
-  </Grid>);
+  </Grid>
+);
 
 export default withSwitch(Styled(Expand));

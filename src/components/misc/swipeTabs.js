@@ -19,8 +19,8 @@ const wIndex = compose(
   })
 );
 
-const SwipeTabs = ({ children, changeSet, index, iHue = '#f0f' }) =>
-  (<Grid container justify="center" spacing={0}>
+const SwipeTabs = ({ children, changeSet, index, iHue = '#fff' }) => (
+  <Grid container justify="center" spacing={0}>
     <Grid item xs={11}>
       <Tabs
         centered
@@ -44,6 +44,7 @@ const SwipeTabs = ({ children, changeSet, index, iHue = '#f0f' }) =>
         {children}
       </SwipeableViews>
     </Grid>
-  </Grid>);
+  </Grid>
+);
 
 export default wIndex(withWidth()(SwipeTabs));

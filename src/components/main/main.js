@@ -7,7 +7,7 @@ import { withStyles } from 'material-ui/styles';
 import Home from '../home';
 import About from '../about';
 import Contact from '../contact';
-import { Diversity, Spirituality } from '../services';
+import Services, { Diversity, Spirituality } from '../services';
 import Blog from '../blog';
 import Nav from './nav';
 
@@ -24,6 +24,7 @@ const Main = props => (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/services" component={Services} />
         <Route path="/diversity" component={Diversity} />
         <Route path="/spirituality" component={Spirituality} />
         <Route path="/blog" component={Blog} />

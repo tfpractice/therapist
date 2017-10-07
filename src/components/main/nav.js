@@ -21,7 +21,7 @@ const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => {
   const links = [
     { pathname: '/', label: 'Natasha Edwards' },
     { pathname: '/about', label: 'about' },
-    { pathname: location.pathname, label: <Services /> },
+    { pathname: '/services', label: 'Services' },
     { pathname: '/blog', label: 'blog' },
     { pathname: '/contact', label: 'contact' },
   ];
@@ -33,7 +33,7 @@ const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => {
         value={index}
         scrollButtons="on"
         textColor="#fff"
-        indicatorColor="#f0f"
+        indicatorColor="#fff"
         onChange={set}
       >
         {links.map(l => (

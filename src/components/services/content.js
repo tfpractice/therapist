@@ -27,3 +27,58 @@ Church Hurt is a term which refers to the pain or trauma sometimes inflicted by 
 As a therapist, I often see leaders who are in conflict within the body of believers; this may be due to lifestyle, sexuality, marital status/divorce, or many other life choices.  Clients have expressed they were upset by a pastor who demonized them for their behavior, their family situation or being GLBTQ. I’ve heard stories from clients who have found church confusing, contradictory, or even damaging to their identity and self-image. This church hurt reality can leave people isolated, disconnected, reluctant to re-engage, afraid of being hurt again. Many clients enter therapy conflicted about their spirituality as a result of church hurt or ambivalent about wanting to return to church, finding a new place of worship, and questioning the place of church in their lives.
  
 While churches and other places of worship should be a shelter offering protection, a safe house for the broken, a rescue for the abused and mistreated, sadly, some of the most serious and enduring pain is inflicted by the church, by people in these churches.  Individual therapy, group therapy, or church workshops are always to process church hurt and provide a safe space to build a safe and thriving relationship with spirituality and maintain church retention. `;
+`PSYCHOTHERAPY
+Individual Therapy | 45 minutes
+Like many modern therapists, I practice what is known as an &quot;eclectic&quot; form of psychotherapy that is
+tailored to meet an individual&#39;s specific needs. I have experience and expertise working with young
+adults, adults, and seniors providing individual, couples, and family treatment. I approach therapy as a
+collaborative experience; a relationship aimed at achieving lasting, positive change, enhances self-
+insight, and an overall better quality of life. I have the most experience treating those who are struggling
+with anxiety, depression, trauma, eating disorders, GLBTQ population, and/or medical illnesses such as
+HIV/AIDS. Each experience is different and some clients desire short term treatment while others wish
+for a more long term therapeutic relationship to achieve their goals; I look forward to exploring these
+options and co-creating a safe and productive space with those seeking therapy.`;
+
+const therapy = {
+  title: `PSYCHOTHERAPY`,
+  sub: 'Individual Therapy',
+  time: '45',
+  content: `Like many modern therapists, I practice what is known as an &quot;eclectic&quot; form of psychotherapy that is
+  tailored to meet an individual&#39;s specific needs. I have experience and expertise working with young
+  adults, adults, and seniors providing individual, couples, and family treatment. I approach therapy as a
+  collaborative experience; a relationship aimed at achieving lasting, positive change, enhances self-
+  insight, and an overall better quality of life. I have the most experience treating those who are struggling
+  with anxiety, depression, trauma, eating disorders, GLBTQ population, and/or medical illnesses such as
+  HIV/AIDS. Each experience is different and some clients desire short term treatment while others wish
+  for a more long term therapeutic relationship to achieve their goals; I look forward to exploring these
+  options and co-creating a safe and productive space with those seeking therapy.`,
+};
+const group = {
+  title: `Group Therapy`,
+  sub: `Group therapy`,
+  time: `60-90`,
+  content: `Group therapy is a powerful and often under-used form of treatment.. Frequently I host groups at
+various organizations on a variety of topics including Spirituality, Grief and Mourning, Domestic
+Violence, Anxiety and Relaxation, and Empowerment Please contact us for details regarding current or
+upcoming offerings.`,
+};
+
+const assess = {
+  title: `COMPREHENSIVE ASSESMENTS`,
+  sub: `Initial Evaluation`,
+  time: `60-120`,
+  content: `The first step in treatment planning involves a comprehensive assessment. On average, individual
+evaluations take around 90 minutes though this varies depending on an individual&#39;s specific concerns
+and history. Sometimes, this evaluation can be spread out across several visits and may include a
+separate &quot;feedback&quot; visit if indicated. This may involve, with your permission, contacting providers or
+family members who know you well and could provide a richer perspective on the concerns at hand. For
+children and adolescents, we meet privately with the young person, privately with the parent(s) and
+then come together to discuss the plan. Please bring with you to the appointment any copies of prior
+assessments, including neuropsychological testing and discharge summaries, and a recent medication
+list if medications are being prescribed. After the assessment, we will review evidence-based treatment
+options including combinations of psychotherapy, medications, as well as referrals to other providers to
+promote wellness (nutrition, fitness, and other complementary and alternative approaches to the
+traditional medical model).`,
+};
+
+export const services = [ therapy, group, assess ];
