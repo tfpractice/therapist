@@ -1,6 +1,5 @@
 import React from 'react';
 import Grid from 'material-ui/Grid';
-import Text from 'material-ui/Typography';
 import Swipable from 'react-swipeable-views';
 import withStyles from 'material-ui/styles/withStyles';
 import Card, {
