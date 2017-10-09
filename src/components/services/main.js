@@ -21,6 +21,8 @@ const styles = theme => ({
     backgroundPosition: 'center',
     backgroundSize: 'cover',
   },
+  item: { listStyle: 'none' },
+
   card: { backgroundColor: theme.cardBack },
 });
 const Styled = withStyles(styles);
@@ -28,8 +30,8 @@ const Styled = withStyles(styles);
 const Services = ({ classes }) => (
   <Fade in>
     <Grid container justify="center" align="center">
-      <Grid item xs={11}>
-        <GridListTile>
+      <Grid item xs={12}>
+        <GridListTile className={classes.item}>
           <CardMedia className={classes.image} image="/images/lily.jpg" />
 
           <GridListTileBar
@@ -43,7 +45,7 @@ const Services = ({ classes }) => (
           />
         </GridListTile>
       </Grid>
-      <Grid item xs={11}>
+      <Grid item xs>
         <Grid container justify="center" spacing={40}>
           {services.map(s => (
             <Grid item xs={11} key={s.sub}>

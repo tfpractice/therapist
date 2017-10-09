@@ -1,6 +1,6 @@
 import React from 'react';
 import AppBar from 'material-ui/AppBar';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import { compose, withHandlers, withState } from 'recompose';
 
@@ -22,7 +22,8 @@ const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => {
     { pathname: '/', label: 'Natasha Edwards' },
     { pathname: '/about', label: 'about' },
     { pathname: '/services', label: 'Services' },
-    { pathname: '/blog', label: 'blog' },
+    { pathname: '/diversity', label: 'Diversity' },
+    { pathname: '/spirituality', label: 'Spirituality' },
     { pathname: '/contact', label: 'contact' },
   ];
 
@@ -37,12 +38,7 @@ const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => {
         onChange={set}
       >
         {links.map(l => (
-          <Tab
-            key={l.label}
-            label={l.label}
-            onClick={hPush(l)}
-            component="div"
-          />
+          <Tab key={l.label} label={l.label} to={l.pathname} component={Link} />
         ))}
       </Tabs>
     </AppBar>

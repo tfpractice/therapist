@@ -18,6 +18,8 @@ const styles = theme => ({
     maxHeight: '20rem',
     backgroundPosition: 'center',
   },
+  item: { listStyle: 'none' },
+
   media: {
     backgroundColor: 'transparent',
     height: '20rem',
@@ -63,7 +65,7 @@ const Home = ({ classes }) => (
 
         <CardContent>
           <Grid container justify="center">
-            <Grid item xs={9}>
+            <Grid item xs={10}>
               <Text type="headline" component={CardContent} color="secondary">
                 <MarkdownPreview value={mission} {...mkOpts} />
               </Text>

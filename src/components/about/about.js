@@ -1,5 +1,6 @@
-export const quote = `> Living in the moment means letting go of the past and not waiting for the future. It means living your life consciously, aware that each moment you breathe is a gift.
-  —Oprah Winfrey
+export const quote = `
+> Living in the moment means letting go of the past and not waiting for the future. It means living your life consciously, aware that each moment you breathe is a gift.
+>> Oprah Winfrey
 `;
 
 export const bio = `
