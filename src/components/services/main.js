@@ -13,6 +13,7 @@ import ServCard from './servCard';
 import Spirituality from './spirituality';
 import Diversity from './diversity';
 import Menu from './menu';
+import Speciality from './speciality';
 
 const styles = theme => ({
   image: {

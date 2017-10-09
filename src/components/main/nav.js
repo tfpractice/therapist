@@ -31,6 +31,7 @@ const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => {
     <AppBar>
       <Tabs
         centered
+        scrollable
         value={index}
         scrollButtons="on"
         textColor="#fff"
