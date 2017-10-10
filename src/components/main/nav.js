@@ -2,9 +2,11 @@ import React from 'react';
 import AppBar from 'material-ui/AppBar';
 import { withRouter, Link } from 'react-router-dom';
 import Tabs, { Tab } from 'material-ui/Tabs';
+import Toolbar from 'material-ui/Toolbar';
+import Grid from 'material-ui/Grid';
 import { compose, withHandlers, withState } from 'recompose';
-
 import Services from '../services';
+import { links } from './links';
 
 const defProps = { location: '/', index: 0 };
 
@@ -17,18 +19,9 @@ const withIndex = compose(
   })
 );
 
-const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => {
-  const links = [
-    { pathname: '/', label: 'Natasha Edwards' },
-    { pathname: '/about', label: 'about' },
-    { pathname: '/services', label: 'Services' },
-    { pathname: '/diversity', label: 'Diversity' },
-    { pathname: '/spirituality', label: 'Spirituality' },
-    { pathname: '/contact', label: 'contact' },
-  ];
-
-  return (
-    <AppBar>
+const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => (
+  <AppBar>
+    <Toolbar>
       <Tabs
         centered
         scrollable
@@ -42,8 +35,8 @@ const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => {
           <Tab key={l.label} label={l.label} to={l.pathname} component={Link} />
         ))}
       </Tabs>
-    </AppBar>
-  );
-};
+    </Toolbar>
+  </AppBar>
+);
 
 export default withRouter(withIndex(TabNav));

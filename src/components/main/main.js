@@ -20,7 +20,7 @@ const Main = props => (
     <Grid item xs={12}>
       <Route component={Nav} />
     </Grid>
-    <Grid item xs className={props.classes.main}>
+    <Grid item xs={12} className={props.classes.main}>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
