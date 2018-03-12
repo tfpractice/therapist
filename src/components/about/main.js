@@ -22,23 +22,26 @@ const Styled = withStyles(styles, sheet);
 
 const About = ({ classes }) => (
   <Fade in>
-    <Grid container justify="center" align="center">
+    <Grid container justify="center" alignContent="center">
       <Grid item xs={11}>
         <Card className={classes.card}>
           <CardContent>
-            <Grid container justify="center" align="center" spacing={8}>
+            <Grid container justify="center" alignContent="center" spacing={8}>
               <Grid item xs={11} sm={4}>
                 <img className={classes.image} src="/images/headshot.jpg" />
               </Grid>
               <Grid item xs={12} sm>
                 <CardHeader
                   subheader={
-                    <Text type="title">
+                    <Text type="title" color="textSecondary">
                       <MarkdownPreview value={quote} {...mkOpts} />
                     </Text>
                   }
                 />
-                <Text type="title" component={CardContent} color="secondary">
+                <Text
+                  component={CardContent}
+                  variant="subheading"
+                  color="textSecondary">
                   <MarkdownPreview value={bio} {...mkOpts} />
                 </Text>
               </Grid>

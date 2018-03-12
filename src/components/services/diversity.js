@@ -5,7 +5,7 @@ import Text from 'material-ui/Typography';
 import { MarkdownPreview } from 'react-marked-markdown';
 import withStyles from 'material-ui/styles/withStyles';
 import { GridListTile, GridListTileBar } from 'material-ui/GridList';
-import Card, { CardMedia, CardHeader, CardContent } from 'material-ui/Card';
+import Card, { CardMedia, CardContent } from 'material-ui/Card';
 
 import { mkOpts } from '../../utils';
 import { diversity } from './content';
@@ -23,11 +23,11 @@ const Styled = withStyles(styles);
 
 const Diversity = ({ classes }) => (
   <Fade in>
-    <Grid container justify="center" align="center">
+    <Grid container justify="center" alignContent="center">
       <Grid item xs={12}>
         <GridListTile>
           <CardMedia className={classes.image} image="/images/tree.jpg" />
-          
+
           <GridListTileBar
             titlePosition="top"
             title={
@@ -41,7 +41,7 @@ const Diversity = ({ classes }) => (
       <Grid item xs={11}>
         <CardContent>
           <Card className={classes.card}>
-            <Text type="headline" component={CardContent} color="secondary">
+            <Text type="headline" component={CardContent} color="textSecondary">
               <MarkdownPreview value={diversity} {...mkOpts} />
             </Text>
           </Card>
