@@ -23,11 +23,11 @@ const Styled = withStyles(styles);
 
 const Diversity = ({ classes }) => (
   <Fade in>
-    <Grid container justify="center" align="center">
+    <Grid container justify="center" alignContent="center">
       <Grid item xs={12}>
         <GridListTile>
           <CardMedia className={classes.image} image="/images/tree.jpg" />
-          
+
           <GridListTileBar
             titlePosition="top"
             title={

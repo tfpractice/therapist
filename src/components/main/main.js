@@ -16,7 +16,7 @@ const mainStyles = theme => ({ main: { marginTop: '3rem' }});
 const Styled = withStyles(mainStyles, { name: 'Home' });
 
 const Main = props => (
-  <Grid container justify="center" align="center">
+  <Grid container justify="center" alignContent="center">
     <Grid item xs={12}>
       <Route component={Nav} />
     </Grid>

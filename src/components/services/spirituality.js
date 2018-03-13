@@ -30,7 +30,7 @@ const Styled = withStyles(styles);
 
 const Spirituality = ({ classes }) => (
   <Fade in>
-    <Grid container justify="center" align="center">
+    <Grid container justify="center" alignContent="center">
       <Grid item xs={12}>
         <GridListTile className={classes.item}>
           <CardMedia className={classes.image} image="/images/bigSky.jpg" />
@@ -62,8 +62,7 @@ const Spirituality = ({ classes }) => (
                   type="headline"
                   component={CardContent}
                   align="justify"
-                  color="secondary"
-                >
+                  color="secondary">
                   <MarkdownPreview value={churchHurt} {...mkOpts} />
                 </Text>
               </Card>

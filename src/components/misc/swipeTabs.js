@@ -25,7 +25,7 @@ const SwipeTabs = ({ children, changeSet, index, iHue = '#fff' }) => (
       <Tabs
         centered
         index={index}
-        textColor="#fff"
+        textColor="secondary"
         indicatorColor={iHue}
         onChange={changeSet}
       >

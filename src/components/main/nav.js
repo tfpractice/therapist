@@ -5,6 +5,7 @@ import Tabs, { Tab } from 'material-ui/Tabs';
 import Toolbar from 'material-ui/Toolbar';
 import Grid from 'material-ui/Grid';
 import { compose, withHandlers, withState } from 'recompose';
+
 import Services from '../services';
 import { links } from './links';
 
@@ -27,10 +28,9 @@ const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => (
         scrollable
         value={index}
         scrollButtons="on"
-        textColor="#fff"
+        textColor="secondary"
         indicatorColor="#fff"
-        onChange={set}
-      >
+        onChange={set}>
         {links.map(l => (
           <Tab key={l.label} label={l.label} to={l.pathname} component={Link} />
         ))}

@@ -6,7 +6,6 @@ import { MarkdownPreview } from 'react-marked-markdown';
 import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import withStyles from 'material-ui/styles/withStyles';
 import Avatar from 'material-ui/Avatar';
-
 import Card, { CardMedia, CardHeader, CardContent } from 'material-ui/Card';
 
 import { mkOpts } from '../../utils';
@@ -34,7 +33,7 @@ const sheet = { name: 'About' };
 const Styled = withStyles(styles, sheet);
 
 const Home = ({ classes }) => (
-  <Grid container justify="center" align="center">
+  <Grid container justify="center" alignContent="center">
     <Grid item xs={11}>
       <Card className={classes.card}>
         <CardHeader
@@ -55,8 +54,7 @@ const Home = ({ classes }) => (
                 type="headline"
                 align="center"
                 component={CardContent}
-                color="secondary"
-              >
+                color="secondary">
                 <MarkdownPreview value={sartre} {...mkOpts} />
               </Text>
             }
