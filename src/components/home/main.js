@@ -6,7 +6,6 @@ import { MarkdownPreview } from 'react-marked-markdown';
 import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import withStyles from 'material-ui/styles/withStyles';
 import Avatar from 'material-ui/Avatar';
-
 import Card, { CardMedia, CardHeader, CardContent } from 'material-ui/Card';
 
 import { mkOpts } from '../../utils';
@@ -23,10 +22,11 @@ const styles = theme => ({
   media: {
     backgroundColor: 'transparent',
     height: '20rem',
-    backgroundSize: 'auto',
+    backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    '&:hover': { backgroundSize: 'cover' },
+
+    // '&:hover': { backgroundSize: 'cover' },
   },
   card: { backgroundColor: 'rgba(48,48,48,0.8)' },
 });
@@ -34,7 +34,7 @@ const sheet = { name: 'About' };
 const Styled = withStyles(styles, sheet);
 
 const Home = ({ classes }) => (
-  <Grid container justify="center" align="center">
+  <Grid container justify="center" alignContent="center">
     <Grid item xs={11}>
       <Card className={classes.card}>
         <CardHeader
@@ -52,11 +52,10 @@ const Home = ({ classes }) => (
           <GridListTileBar
             title={
               <Text
-                type="headline"
                 align="center"
                 component={CardContent}
-                color="secondary"
-              >
+                variant="title"
+                color="textSecondary">
                 <MarkdownPreview value={sartre} {...mkOpts} />
               </Text>
             }
@@ -66,7 +65,10 @@ const Home = ({ classes }) => (
         <CardContent>
           <Grid container justify="center">
             <Grid item xs={10}>
-              <Text type="headline" component={CardContent} color="secondary">
+              <Text
+                component={CardContent}
+                variant="subheading"
+                color="textSecondary">
                 <MarkdownPreview value={mission} {...mkOpts} />
               </Text>
             </Grid>

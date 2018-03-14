@@ -24,12 +24,12 @@ const Expand = ({ open, children, dStyle, toggle, color, header, classes }) => (
   <Grid
     container
     justify="center"
-    align="center"
+    alignContent="center"
     spacing={0}
     className={classes.grid}
   >
     <Grid item xs={11}>
-      <Grid container justify="space-between" align="center" spacing={0}>
+      <Grid container justify="space-between" alignContent="center" spacing={0}>
         <Grid item xs={9} onClick={toggle}>
           {header}
         </Grid>

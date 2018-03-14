@@ -30,7 +30,7 @@ const Styled = withStyles(styles);
 
 const Services = ({ classes }) => (
   <Fade in>
-    <Grid container justify="center" align="center">
+    <Grid container justify="center" alignContent="center">
       <Grid item xs={12}>
         <GridListTile className={classes.item}>
           <CardMedia className={classes.image} image="/images/lily.jpg" />

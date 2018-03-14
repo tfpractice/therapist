@@ -23,7 +23,7 @@ const styles = theme => ({
 const Styled = withStyles(styles);
 
 const Diversity = ({ classes }) => (
-  <Grid container justify="center" align="center">
+  <Grid container justify="center" alignContent="center">
     <Grid item xs={12}>
       <Expand
         header={
@@ -39,8 +39,7 @@ const Diversity = ({ classes }) => (
               }
             />
           </GridListTile>
-        }
-      >
+        }>
         <CardContent>
           <Card className={classes.card}>
             <Text type="headline" component={CardContent} color="secondary">

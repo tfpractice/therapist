@@ -10,6 +10,7 @@ import App from './components/main';
 import registerServiceWorker from './registerServiceWorker';
 import getStore from './store';
 
+console.log('theme', theme);
 const Routes = (
   <Provider store={getStore()}>
     <MuiThemeProvider theme={theme}>

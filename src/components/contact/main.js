@@ -28,11 +28,11 @@ const Styled = withStyles(styles, sheet);
 
 const Contact = ({ classes }) => (
   <Fade in>
-    <Grid container justify="center" align="center">
+    <Grid container justify="center" alignContent="center">
       <Grid item xs={9}>
         <Card className={classes.card}>
           <CardHeader title={quote} subheader="― Shannon L. Alder" />
-          <Grid container justify="center" align="center">
+          <Grid container justify="center" alignContent="center">
             <Grid item xs={12}>
               <Swipable disabled index={0} ignoreNativeScroll>
                 <Map />
