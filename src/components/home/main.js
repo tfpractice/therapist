@@ -22,10 +22,11 @@ const styles = theme => ({
   media: {
     backgroundColor: 'transparent',
     height: '20rem',
-    backgroundSize: 'auto',
+    backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
-    '&:hover': { backgroundSize: 'cover' },
+
+    // '&:hover': { backgroundSize: 'cover' },
   },
   card: { backgroundColor: 'rgba(48,48,48,0.8)' },
 });
@@ -51,10 +52,10 @@ const Home = ({ classes }) => (
           <GridListTileBar
             title={
               <Text
-                type="headline"
                 align="center"
                 component={CardContent}
-                color="secondary">
+                variant="title"
+                color="textSecondary">
                 <MarkdownPreview value={sartre} {...mkOpts} />
               </Text>
             }
@@ -64,7 +65,10 @@ const Home = ({ classes }) => (
         <CardContent>
           <Grid container justify="center">
             <Grid item xs={10}>
-              <Text type="headline" component={CardContent} color="secondary">
+              <Text
+                component={CardContent}
+                variant="subheading"
+                color="textSecondary">
                 <MarkdownPreview value={mission} {...mkOpts} />
               </Text>
             </Grid>

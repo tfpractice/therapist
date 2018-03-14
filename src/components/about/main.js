@@ -33,12 +33,16 @@ const About = ({ classes }) => (
               <Grid item xs={12} sm>
                 <CardHeader
                   subheader={
-                    <Text type="title">
+                    <Text type="title" color="textSecondary">
                       <MarkdownPreview value={quote} {...mkOpts} />
                     </Text>
                   }
                 />
-                <Text type="title" component={CardContent} color="secondary">
+                {/* <Text type="title" component={CardContent} color="secondary"> */}
+                <Text
+                  component={CardContent}
+                  variant="subheading"
+                  color="textSecondary">
                   <MarkdownPreview value={bio} {...mkOpts} />
                 </Text>
               </Grid>

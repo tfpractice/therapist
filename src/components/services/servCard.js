@@ -16,7 +16,7 @@ const Styled = withStyles(styles);
 
 const ServCard = ({ sub, time, content, classes }) => (
   <Expand header={<CardHeader title={`${sub} | ${time} min.`} />}>
-    <Text type="headline" component={CardContent} color="secondary">
+    <Text type="headline" component={CardContent} color="textSecondary">
       <MarkdownPreview value={content} {...mkOpts} />
     </Text>
   </Expand>

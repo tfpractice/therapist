@@ -41,7 +41,7 @@ const Diversity = ({ classes }) => (
       <Grid item xs={11}>
         <CardContent>
           <Card className={classes.card}>
-            <Text type="headline" component={CardContent} color="secondary">
+            <Text type="headline" component={CardContent} color="textSecondary">
               <MarkdownPreview value={diversity} {...mkOpts} />
             </Text>
           </Card>
