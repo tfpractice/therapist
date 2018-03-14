@@ -18,6 +18,8 @@ const styles = theme => ({
     backgroundPosition: 'center',
     backgroundSize: 'cover',
   },
+  item: { listStyle: 'none' },
+
   container: {
     backgroundImage: `url('/images/bigSky.jpg')`,
     backgroundPosition: 'center',
@@ -36,7 +38,7 @@ const Spirituality = ({ classes }) => (
           <CardMedia className={classes.image} image="/images/bigSky.jpg" />
 
           <GridListTileBar
-            titlePosition="top"
+            titlePosition="bottom"
             title={
               <Text type="headline" align="center">
                 Spirituality

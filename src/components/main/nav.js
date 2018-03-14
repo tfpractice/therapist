@@ -3,10 +3,8 @@ import AppBar from 'material-ui/AppBar';
 import { withRouter, Link } from 'react-router-dom';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import Toolbar from 'material-ui/Toolbar';
-import Grid from 'material-ui/Grid';
 import { compose, withHandlers, withState } from 'recompose';
 
-import Services from '../services';
 import { links } from './links';
 
 const defProps = { location: '/', index: 0 };
