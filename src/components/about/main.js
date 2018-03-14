@@ -38,7 +38,6 @@ const About = ({ classes }) => (
                     </Text>
                   }
                 />
-                {/* <Text type="title" component={CardContent} color="secondary"> */}
                 <Text
                   component={CardContent}
                   variant="subheading"

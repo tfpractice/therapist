@@ -4,8 +4,7 @@ import Fade from 'material-ui/transitions/Fade';
 import Text from 'material-ui/Typography';
 import { MarkdownPreview } from 'react-marked-markdown';
 import withStyles from 'material-ui/styles/withStyles';
-import { GridListTile, GridListTileBar } from 'material-ui/GridList';
-import Card, { CardMedia, CardHeader, CardContent } from 'material-ui/Card';
+import Card, { CardHeader, CardContent } from 'material-ui/Card';
 
 import { mkOpts } from '../../utils';
 import { Expand } from '../misc';
