@@ -21,7 +21,7 @@ const sheet = { name: 'About' };
 const Styled = withStyles(styles, sheet);
 
 const About = ({ classes }) => (
-  <Fade in>
+  <Fade in timeout={500}>
     <Grid container justify="center" alignContent="center">
       <Grid item xs={11}>
         <Card className={classes.card}>

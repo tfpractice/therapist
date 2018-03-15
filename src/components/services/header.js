@@ -5,7 +5,6 @@ import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import Fade from 'material-ui/transitions/Fade';
 import { MarkdownPreview } from 'react-marked-markdown';
 import withStyles from 'material-ui/styles/withStyles';
-import Swipable from 'react-swipeable-views';
 import Card, {
   CardMedia,
   CardHeader,
@@ -16,7 +15,6 @@ import { Link } from 'react-router-dom';
 import Button from 'material-ui/Button';
 
 import Tabs from './tabs';
-import { withIndex } from '../wrappers';
 import { mkOpts } from '../../utils';
 import { services } from './content';
 import ServCard from './servCard';
@@ -24,8 +22,6 @@ import Spirituality from './spirituality';
 import Diversity from './diversity';
 import Menu from './menu';
 import Speciality from './speciality';
-import Header from './header';
-import Plans from './plans';
 
 {
   /* <CardActions className={classes.actions} disableActionSpacing>
@@ -60,24 +56,28 @@ const styles = theme => ({
 });
 const Styled = withStyles(styles);
 
-const Services = ({ classes, index, changeSet, ...props }) => {
+const Services = ({ classes, index, ...props }) => {
   console.log('props', props);
   return (
-    <Fade in>
-      <Grid container justify="center" alignContent="center">
-        <Grid item xs={12}>
-          <Header index={index} changeHandler={changeSet} />
-        </Grid>
-        <Grid item xs={11}>
-          <Swipable onChangeIndex={changeSet} index={index}>
-            <Plans />
-            <Spirituality />
-            <Diversity />
-          </Swipable>
-        </Grid>
+    <Grid container justify="center" alignContent="center">
+      <Grid item xs={12}>
+        <GridListTile className={classes.item}>
+          <CardMedia className={classes.image} image="/images/lily.jpg" />
+
+          <GridListTileBar
+            titlePosition="bottom"
+            title={
+              <Grid container justify="center" alignContent="center">
+                <Grid item xs={12}>
+                  <Tabs index={index} onChange={props.changeHandler} />
+                </Grid>
+              </Grid>
+            }
+          />
+        </GridListTile>
       </Grid>
-    </Fade>
+    </Grid>
   );
 };
 
-export default Styled(withIndex(Services));
+export default Styled(Services);

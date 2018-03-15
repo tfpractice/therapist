@@ -18,6 +18,8 @@ const styles = theme => ({
     backgroundPosition: 'center',
     backgroundSize: 'cover',
   },
+  item: { listStyle: 'none' },
+
   card: { backgroundColor: theme.cardBack },
 });
 const Styled = withStyles(styles);
@@ -27,11 +29,11 @@ const Diversity = ({ classes }) => (
     <Grid item xs={12}>
       <Expand
         header={
-          <GridListTile>
+          <GridListTile className={classes.item}>
             <CardMedia className={classes.image} image="/images/tree.jpg" />
 
             <GridListTileBar
-              titlePosition="top"
+              titlePosition="bottom"
               title={
                 <Text type="headline" align="center">
                   Diversity, Multiculturalism, & Inclusion in the Workplace

@@ -81,4 +81,4 @@ promote wellness (nutrition, fitness, and other complementary and alternative ap
 traditional medical model).`,
 };
 
-export const services = [ therapy, group, assess ];
+export const services = [ assess, therapy, group ];
