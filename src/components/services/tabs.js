@@ -21,7 +21,7 @@ const TabNav = ({ index, set, match, location, ...rest } = defProps) => (
       scrollButtons="on"
       textColor="secondary"
       indicatorColor="#fff"
-      onChange={rest.onChange}>
+      onChange={rest.set}>
       {links.map((l, i) => (
         <Tab key={l.label} label={l.label} onClick={x => rest.onChange(i)} />
       ))}
@@ -29,4 +29,4 @@ const TabNav = ({ index, set, match, location, ...rest } = defProps) => (
   </Toolbar>
 );
 
-export default withRouter(withIndex(TabNav));
+export default withRouter(TabNav);

@@ -25,8 +25,6 @@ const Main = props => (
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/services" component={Services} />
-        <Route path="/diversity" component={Diversity} />
-        <Route path="/spirituality" component={Spirituality} />
         <Route path="/blog" component={Blog} />
         <Route path="/contact" component={Contact} />
       </Switch>

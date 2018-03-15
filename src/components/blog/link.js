@@ -24,13 +24,14 @@ const styles = theme => ({
     '&:hover': { backgroundSize: 'contain' },
   },
 });
+
 const Styled = withStyles(styles);
 
 const BlogCard = ({ classes }) => (
   <Card className={classes.card}>
     <CardHeader
       avatar={
-        <Link to={`/`}>
+        <Link to="/">
           <Avatar src="/images/headshot.jpg" />
         </Link>
       }
@@ -38,7 +39,7 @@ const BlogCard = ({ classes }) => (
     />
     <CardContent>
       <GridListTile className={classes.item}>
-        <Link to={`/}`}>
+        <Link to="/">
           <CardMedia
             className={classes.media}
             image="/images/headshot.jpg"

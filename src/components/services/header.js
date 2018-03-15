@@ -23,26 +23,8 @@ import Diversity from './diversity';
 import Menu from './menu';
 import Speciality from './speciality';
 
-{
-  /* <CardActions className={classes.actions} disableActionSpacing>
-  <IconButton aria-label="Add to favorites">
-    <FavoriteIcon />
-  </IconButton>
-  <IconButton aria-label="Share">
-    <ShareIcon />
-  </IconButton>
-  <IconButton
-    className={classnames(classes.expand, {
-      [classes.expandOpen]: this.state.expanded,
-    })}
-    onClick={this.handleExpandClick}
-    aria-expanded={this.state.expanded}
-    aria-label="Show more"
-  >
-    <ExpandMoreIcon />
-  </IconButton>
-</CardActions> */
-}
+const images = [ '/images/lily.jpg', '/images/bigSky.jpg', '/images/tree.jpg' ];
+
 const styles = theme => ({
   image: {
     height: '20rem',
@@ -51,33 +33,28 @@ const styles = theme => ({
     backgroundSize: 'cover',
   },
   item: { listStyle: 'none' },
-
   card: { backgroundColor: theme.cardBack },
 });
+
 const Styled = withStyles(styles);
 
-const Services = ({ classes, index, ...props }) => {
-  console.log('props', props);
-  return (
-    <Grid container justify="center" alignContent="center">
-      <Grid item xs={12}>
-        <GridListTile className={classes.item}>
-          <CardMedia className={classes.image} image="/images/lily.jpg" />
+const Services = ({ classes, index, ...props }) => (
+  <Grid container justify="center" alignContent="center">
+    <Grid item xs={12}>
+      <GridListTile className={classes.item}>
+        <CardMedia className={classes.image} image={images[index]} />
 
-          <GridListTileBar
-            titlePosition="bottom"
-            title={
-              <Grid container justify="center" alignContent="center">
-                <Grid item xs={12}>
-                  <Tabs index={index} onChange={props.changeHandler} />
-                </Grid>
-              </Grid>
-            }
-          />
-        </GridListTile>
-      </Grid>
+        <GridListTileBar
+          titlePosition="bottom"
+          title={
+            <Grid container justify="center" alignContent="center">
+              <Tabs index={index} set={props.set} onChange={props.onChange} />
+            </Grid>
+          }
+        />
+      </GridListTile>
     </Grid>
-  );
-};
+  </Grid>
+);
 
 export default Styled(Services);

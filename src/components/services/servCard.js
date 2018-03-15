@@ -11,10 +11,11 @@ import { Expand } from '../misc';
 import { diversity } from './content';
 
 const styles = theme => ({ card: { backgroundColor: theme.cardBack }});
+
 const Styled = withStyles(styles);
 
 const ServCard = ({ sub, time, content, classes }) => (
-  <Expand header={<CardHeader title={`${sub} | ${time} min.`} />}>
+  <Expand header={<CardHeader title={`${sub} `} subheader={`${time} min.`} />}>
     <Text type="headline" component={CardContent} color="textSecondary">
       <MarkdownPreview value={content} {...mkOpts} />
     </Text>
