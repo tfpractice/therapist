@@ -58,26 +58,24 @@ const styles = theme => ({
 
   card: { backgroundColor: theme.cardBack },
 });
+
 const Styled = withStyles(styles);
 
-const Services = ({ classes, index, changeSet, ...props }) => {
-  console.log('props', props);
-  return (
-    <Fade in>
-      <Grid container justify="center" alignContent="center">
-        <Grid item xs={12}>
-          <Header index={index} changeHandler={changeSet} />
-        </Grid>
-        <Grid item xs={11}>
-          <Swipable onChangeIndex={changeSet} index={index}>
-            <Plans />
-            <Spirituality />
-            <Diversity />
-          </Swipable>
-        </Grid>
+const Services = ({ classes, index, set, changeSet, ...props }) => (
+  <Fade in>
+    <Grid container justify="center" alignContent="center">
+      <Grid item xs={12}>
+        <Header index={index} set={set} onChange={changeSet} />
       </Grid>
-    </Fade>
-  );
-};
+      <Grid item xs={11}>
+        <Swipable onChangeIndex={changeSet} index={index}>
+          <Plans />
+          <Spirituality />
+          <Diversity />
+        </Swipable>
+      </Grid>
+    </Grid>
+  </Fade>
+);
 
 export default Styled(withIndex(Services));

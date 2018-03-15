@@ -7,10 +7,11 @@ import { articles } from './content';
 import BlogCard from './link';
 
 const styles = theme => ({
-  bNav: { backgroundColor: theme.palette.primary[500] },
-  btn: { backgroundColor: theme.palette.accent[500] },
+  bNav: { backgroundColor: theme.palette.primary },
+  btn: { backgroundColor: theme.palette.accent },
   grid: { backgroundColor: 'rgba(0,150,136, 0.17)' },
 });
+
 const Styled = withStyles(styles);
 
 const BlogView = () => (

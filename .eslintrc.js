@@ -5,17 +5,17 @@ const config = {
   parserOptions: {
     ecmaFeatures: { experimentalObjectRestSpread: true, jsx: true },
     ecmaVersion: 7,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   plugins: ['import', 'import-order-autofix', 'prettier', 'react'],
   settings: {
-    'import/resolver': { 'babel-module': {}, 'babel-module-alias': {} }
+    'import/resolver': { 'babel-module': {}, 'babel-module-alias': {} },
   },
   rules: {
     'array-bracket-spacing': [
       2,
       'always',
-      { arraysInArrays: false, objectsInArrays: false, singleValue: true }
+      { arraysInArrays: false, objectsInArrays: false, singleValue: true },
     ],
     'arrow-parens': [2, 'as-needed', { requireForBlockBody: true }],
     'brace-style': [2, '1tbs', { allowSingleLine: true }],
@@ -27,8 +27,8 @@ const config = {
         exports: 'always-multiline',
         functions: 'ignore',
         imports: 'always-multiline',
-        objects: 'always-multiline'
-      }
+        objects: 'always-multiline',
+      },
     ],
     curly: 0,
     'func-call-spacing': [2, 'never'],
@@ -39,28 +39,28 @@ const config = {
       {
         groups: [
           ['builtin', 'external'],
-          ['index', 'internal', 'parent', 'sibling']
+          ['index', 'internal', 'parent', 'sibling'],
         ],
-        'newlines-between': 'always'
-      }
+        'newlines-between': 'always',
+      },
     ],
     'import/no-extraneous-dependencies': [
       0,
       {
         devDependencies: true,
         optionalDependencies: false,
-        peerDependencies: false
-      }
+        peerDependencies: false,
+      },
     ],
     'import/order': [
       2,
       {
         groups: [
           ['builtin', 'external'],
-          ['index', 'internal', 'parent', 'sibling']
+          ['index', 'internal', 'parent', 'sibling'],
         ],
-        'newlines-between': 'always'
-      }
+        'newlines-between': 'always',
+      },
     ],
     indent: [
       2,
@@ -70,8 +70,8 @@ const config = {
         FunctionExpression: { body: 1, parameters: 'first' },
         MemberExpression: 1,
         ObjectExpression: 'first',
-        VariableDeclarator: 0
-      }
+        VariableDeclarator: 0,
+      },
     ],
     'jsx-a11y/href-no-hash': 0,
     'jsx-quotes': 1,
@@ -79,8 +79,8 @@ const config = {
       2,
       {
         multiLine: { beforeColon: false, mode: 'minimum' },
-        singleLine: { afterColon: true, beforeColon: false, mode: 'minimum' }
-      }
+        singleLine: { afterColon: true, beforeColon: false, mode: 'minimum' },
+      },
     ],
     'line-comment-position': [2, { position: 'above' }],
     'lines-around-comment': [
@@ -95,8 +95,8 @@ const config = {
         allowObjectEnd: true,
         allowObjectStart: true,
         beforeBlockComment: true,
-        beforeLineComment: true
-      }
+        beforeLineComment: true,
+      },
     ],
     'max-len': [2, 80],
     'new-cap': 2,
@@ -111,14 +111,14 @@ const config = {
     'no-invalid-regexp': 1,
     'no-mixed-requires': 0,
     'no-mixed-spaces-and-tabs': 2,
-    'no-multi-spaces': [2, { exceptions: { Property: true } }],
+    'no-multi-spaces': [2, { exceptions: { Property: false } }],
     'no-multiple-empty-lines': [2, { max: 1, maxEOF: 1 }],
     'no-native-reassign': 1,
     'no-new-require': 2,
     'no-process-exit': 0,
     'no-self-compare': 2,
     'no-shadow-restricted-names': 2,
-    'no-trailing-spaces': [2, { skipBlankLines: true }],
+    'no-trailing-spaces': [2, { skipBlankLines: false }],
     'no-undef': 'off',
     'no-underscore-dangle': 0,
     'no-unused-expressions': 1,
@@ -128,31 +128,33 @@ const config = {
       2,
       {
         ObjectExpression: { minProperties: 5, multiline: true },
-        ObjectPattern: { multiline: true }
-      }
+        ObjectPattern: { multiline: true },
+      },
     ],
     'object-curly-spacing': [
       2,
       'always',
-      { arraysInObjects: false, objectsInObjects: false }
+      { arraysInObjects: false, objectsInObjects: false },
     ],
+    'padded-blocks': [2, 'never'],
     'padding-line-between-statements': [
       2,
       { blankLine: 'always', next: '*', prev: ['const', 'let', 'var'] },
       {
-        blankLine: 'any',
+        blankLine: 'always',
         next: ['const', 'let', 'var'],
-        prev: ['const', 'let', 'var']
-      }
+        prev: ['const', 'let', 'var'],
+      },
     ],
+
     'prettier/prettier': [
       0,
       {
         bracketSpacing: false,
         jsxBracketSameLine: true,
         semi: true,
-        trailingComma: 'all'
-      }
+        trailingComma: 'all',
+      },
     ],
     quotes: [2, 'single', { allowTemplateLiterals: true, avoidEscape: true }],
     'react-app/no-undef': 0,
@@ -164,7 +166,7 @@ const config = {
     'react/jsx-uses-vars': 1,
     'react/jsx-wrap-multilines': [
       2,
-      { arrow: true, assignment: true, declaration: true, return: true }
+      { arrow: true, assignment: true, declaration: true, return: true },
     ],
     'react/no-did-mount-set-state': 1,
     'react/no-did-update-set-state': 1,
@@ -179,15 +181,15 @@ const config = {
       {
         ignoreCase: true,
         ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['single', 'multiple', 'all', 'none']
-      }
+        memberSyntaxSortOrder: ['single', 'multiple', 'all', 'none'],
+      },
     ],
 
     'space-before-function-paren': 0,
     'space-infix-ops': 2,
     strict: 1,
-    'valid-typeof': 2
-  }
+    'valid-typeof': 2,
+  },
 };
 
 module.exports = config;

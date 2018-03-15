@@ -27,26 +27,14 @@ const styles = theme => ({
   },
   card: { backgroundColor: 'rgba(48,48,48,0.8)' },
 });
+
 const sheet = { name: 'About' };
+
 const Styled = withStyles(styles);
 
 const Spirituality = ({ classes }) => (
   <Fade in>
     <Grid container justify="center" alignContent="center">
-      <Grid item xs={12}>
-        <GridListTile className={classes.item}>
-          <CardMedia className={classes.image} image="/images/bigSky.jpg" />
-
-          <GridListTileBar
-            titlePosition="bottom"
-            title={
-              <Text type="headline" align="center">
-                Spirituality
-              </Text>
-            }
-          />
-        </GridListTile>
-      </Grid>
       <Grid item xs={11}>
         <CardContent>
           <Grid container justify="center">

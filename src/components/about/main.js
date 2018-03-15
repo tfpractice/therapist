@@ -17,7 +17,9 @@ const styles = (theme) => {
     card: { backgroundColor: theme.cardBack },
   };
 };
+
 const sheet = { name: 'About' };
+
 const Styled = withStyles(styles, sheet);
 
 const About = ({ classes }) => (
@@ -32,11 +34,7 @@ const About = ({ classes }) => (
               </Grid>
               <Grid item xs={12} sm>
                 <CardHeader
-                  subheader={
-                    <Text type="title" color="textSecondary">
-                      <MarkdownPreview value={quote} {...mkOpts} />
-                    </Text>
-                  }
+                  subheader={<MarkdownPreview value={quote} {...mkOpts} />}
                 />
                 <Text
                   component={CardContent}

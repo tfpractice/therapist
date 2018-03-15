@@ -3,6 +3,7 @@ import AppBar from 'material-ui/AppBar';
 import { withRouter, Link } from 'react-router-dom';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import Toolbar from 'material-ui/Toolbar';
+import Grid from 'material-ui/Grid';
 import { compose, withHandlers, withState } from 'recompose';
 
 import { links } from './links';
@@ -21,18 +22,26 @@ const withIndex = compose(
 const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => (
   <AppBar>
     <Toolbar>
-      <Tabs
-        centered
-        scrollable
-        value={index}
-        scrollButtons="on"
-        textColor="secondary"
-        indicatorColor="#fff"
-        onChange={set}>
-        {links.map(l => (
-          <Tab key={l.label} label={l.label} to={l.pathname} component={Link} />
-        ))}
-      </Tabs>
+      <Grid container justify="center" alignContent="center">
+        <Tabs
+          centered
+          scrollable
+          value={index}
+
+          // scrollButtons="on"
+          textColor="secondary"
+          indicatorColor="#fff"
+          onChange={set}>
+          {links.map(l => (
+            <Tab
+              key={l.label}
+              label={l.label}
+              to={l.pathname}
+              component={Link}
+            />
+          ))}
+        </Tabs>
+      </Grid>
     </Toolbar>
   </AppBar>
 );
