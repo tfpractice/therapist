@@ -1,9 +1,6 @@
 import React from 'react';
 import Grid from 'material-ui/Grid';
-import Text from 'material-ui/Typography';
 import { GridListTile, GridListTileBar } from 'material-ui/GridList';
-import Fade from 'material-ui/transitions/Fade';
-import { MarkdownPreview } from 'react-marked-markdown';
 import withStyles from 'material-ui/styles/withStyles';
 import Card, {
   CardMedia,
@@ -11,19 +8,10 @@ import Card, {
   CardActions,
   CardContent,
 } from 'material-ui/Card';
-import { Link } from 'react-router-dom';
-import Button from 'material-ui/Button';
 
 import Tabs from './tabs';
-import { mkOpts } from '../../utils';
-import { services } from './content';
-import ServCard from './servCard';
-import Spirituality from './spirituality';
-import Diversity from './diversity';
-import Menu from './menu';
-import Speciality from './speciality';
 
-const images = [ '/images/lily.jpg', '/images/bigSky.jpg', '/images/tree.jpg' ];
+const images = [ '/images/lily.jpg', '/images/tree.jpg', '/images/bigSky.jpg' ];
 
 const styles = theme => ({
   image: {
@@ -32,6 +20,8 @@ const styles = theme => ({
     backgroundPosition: 'center',
     backgroundSize: 'cover',
   },
+  bar: { paddingBottom: '0.5rem', backgroundColor: '#607d8bdd' },
+
   item: { listStyle: 'none' },
   card: { backgroundColor: theme.cardBack },
 });
@@ -46,6 +36,7 @@ const Services = ({ classes, index, ...props }) => (
 
         <GridListTileBar
           titlePosition="bottom"
+          className={classes.bar}
           title={
             <Grid container justify="center" alignContent="center">
               <Tabs index={index} set={props.set} onChange={props.onChange} />

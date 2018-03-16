@@ -7,7 +7,7 @@ import { withStyles } from 'material-ui/styles';
 import Home from '../home';
 import About from '../about';
 import Contact from '../contact';
-import Services, { Diversity, Spirituality } from '../services';
+import Services from '../services';
 import Blog from '../blog';
 import Nav from './nav';
 

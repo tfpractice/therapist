@@ -119,7 +119,7 @@ const config = {
     'no-self-compare': 2,
     'no-shadow-restricted-names': 2,
     'no-trailing-spaces': [2, { skipBlankLines: false }],
-    'no-undef': 'off',
+    'no-undef': 2,
     'no-underscore-dangle': 0,
     'no-unused-expressions': 1,
     'no-unused-vars': 2,

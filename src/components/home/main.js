@@ -12,6 +12,9 @@ import { mkOpts } from '../../utils';
 import { sartre, mainQuote, mission } from './home';
 
 const styles = theme => ({
+  home: { paddingTop: '2rem' },
+  bar: { backgroundColor: '#607d8bdd' },
+
   image: {
     height: '20rem',
     maxHeight: '20rem',
@@ -30,11 +33,17 @@ const styles = theme => ({
   },
   card: { backgroundColor: 'rgba(48,48,48,0.8)' },
 });
+
 const sheet = { name: 'About' };
+
 const Styled = withStyles(styles, sheet);
 
 const Home = ({ classes }) => (
-  <Grid container justify="center" alignContent="center">
+  <Grid
+    container
+    justify="center"
+    alignContent="center"
+    className={classes.home}>
     <Grid item xs={11}>
       <Card className={classes.card}>
         <CardHeader
