@@ -8,7 +8,6 @@ import Card, { CardHeader, CardContent } from 'material-ui/Card';
 
 import { mkOpts } from '../../utils';
 import { Expand } from '../misc';
-import { diversity } from './content';
 
 const styles = theme => ({ card: { backgroundColor: theme.cardBack }});
 

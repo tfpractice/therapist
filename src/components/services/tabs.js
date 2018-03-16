@@ -1,9 +1,12 @@
 import React from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import Toolbar from 'material-ui/Toolbar';
+import { withStyles } from 'material-ui/styles';
 
-import { withIndex } from '../wrappers';
+const styles = theme => ({ bar: { padding: '1rem' }});
+
+const Styled = withStyles(styles);
 
 const links = [
   { pathname: '/services', label: 'Services' },
@@ -14,8 +17,9 @@ const links = [
 const defProps = { location: '/', index: 0 };
 
 const TabNav = ({ index, set, match, location, ...rest } = defProps) => (
-  <Toolbar>
+  <Toolbar className={rest.classes.bar}>
     <Tabs
+      className={rest.classes.bar}
       centered
       value={index}
       scrollButtons="on"
@@ -29,4 +33,4 @@ const TabNav = ({ index, set, match, location, ...rest } = defProps) => (
   </Toolbar>
 );
 
-export default withRouter(TabNav);
+export default withRouter(Styled(TabNav));

@@ -3,10 +3,15 @@ import { blueGrey, grey } from 'material-ui/colors';
 import { white } from 'material-ui/colors/common';
 
 const primary = blueGrey;
+
 const accent = white;
+
 const secondary = grey;
+
 const type = 'dark';
+
 const text = { primary: '#ddd', secondary: '#ddd' };
+
 const palette = {
   primary,
   secondary,

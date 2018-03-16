@@ -13,6 +13,7 @@ import { bio, quote } from './about';
 const styles = (theme) => {
   console.log('theme', theme);
   return {
+    about: { paddingTop: '2rem' },
     image: { maxWidth: '90%' },
     card: { backgroundColor: theme.cardBack },
   };
@@ -24,24 +25,37 @@ const Styled = withStyles(styles, sheet);
 
 const About = ({ classes }) => (
   <Fade in timeout={500}>
-    <Grid container justify="center" alignContent="center">
+    <Grid
+      container
+      className={classes.about}
+      justify="center"
+      alignContent="center"
+      alignItems="center">
       <Grid item xs={11}>
         <Card className={classes.card}>
           <CardContent>
-            <Grid container justify="center" alignContent="center" spacing={8}>
+            <Grid
+              container
+              justify="center"
+              alignContent="center"
+              spacing={8}
+              alignItems="center">
               <Grid item xs={11} sm={4}>
                 <img className={classes.image} src="/images/headshot.jpg" />
               </Grid>
               <Grid item xs={12} sm>
-                <CardHeader
+                {/* <CardHeader
                   subheader={<MarkdownPreview value={quote} {...mkOpts} />}
-                />
+                /> */}
                 <Text
                   component={CardContent}
                   variant="subheading"
                   color="textSecondary">
                   <MarkdownPreview value={bio} {...mkOpts} />
                 </Text>
+                <CardHeader
+                  subheader={<MarkdownPreview value={quote} {...mkOpts} />}
+                />
               </Grid>
             </Grid>
           </CardContent>

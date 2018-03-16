@@ -7,6 +7,7 @@ import { articles } from './content';
 import BlogCard from './link';
 
 const styles = theme => ({
+  blog: { paddingTop: '2rem' },
   bNav: { backgroundColor: theme.palette.primary },
   btn: { backgroundColor: theme.palette.accent },
   grid: { backgroundColor: 'rgba(0,150,136, 0.17)' },
@@ -14,12 +15,9 @@ const styles = theme => ({
 
 const Styled = withStyles(styles);
 
-const BlogView = () => (
-  <Fade in>
+const BlogView = ({ classes }) => (
+  <Fade in className={classes.blog}>
     <Grid container justify="center" spacing={24}>
-      <Grid item xs={12}>
-        Blog
-      </Grid>
       <Grid item xs={11}>
         <Grid container justify="center" spacing={24}>
           {articles.map((prod, i) => (

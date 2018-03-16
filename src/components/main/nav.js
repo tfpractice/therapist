@@ -4,23 +4,19 @@ import { withRouter, Link } from 'react-router-dom';
 import Tabs, { Tab } from 'material-ui/Tabs';
 import Toolbar from 'material-ui/Toolbar';
 import Grid from 'material-ui/Grid';
-import { compose, withHandlers, withState } from 'recompose';
+import withStyles from 'material-ui/styles/withStyles';
 
+import { withIndex } from '../wrappers';
 import { links } from './links';
+
+const styles = theme => ({ bar: { backgroundColor: '#607d8bcc' }});
+
+const Styled = withStyles(styles);
 
 const defProps = { location: '/', index: 0 };
 
-const withIndex = compose(
-  withState('index', 'setIndex', ({ index } = defProps) => index || 0),
-  withHandlers({
-    set: ({ setIndex }) => (e, i) => setIndex(i),
-    changeSet: ({ setIndex }) => i => setIndex(i),
-    hPush: ({ history }) => link => () => history.push(link),
-  })
-);
-
 const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => (
-  <AppBar>
+  <AppBar className={rest.classes.bar}>
     <Toolbar>
       <Grid container justify="center" alignContent="center">
         <Tabs
@@ -46,4 +42,4 @@ const TabNav = ({ index, hPush, set, match, location, ...rest } = defProps) => (
   </AppBar>
 );
 
-export default withRouter(withIndex(TabNav));
+export default withRouter(withIndex(Styled(TabNav)));

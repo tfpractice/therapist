@@ -51,7 +51,7 @@ const BlogCard = ({ classes }) => (
           title={<Text>Smaple title</Text>}
           actionIcon={
             <IconButton>
-              <Heart color="rgba(255, 0, 255, 0.7)" />
+              <Heart color="action" />
             </IconButton>
           }
         />
