@@ -50,7 +50,7 @@
     "surge": "^0.20.1"
   },
   "scripts": {
-    "deploy": "yarn build && surge build natasha-edwards.surge.sh",
+    "deploy": "yarn build && surge build natasha-edwards-next.surge.sh",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
