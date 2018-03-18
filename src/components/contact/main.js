@@ -23,7 +23,9 @@ const styles = theme => ({
   },
   card: { backgroundColor: theme.cardBack },
 });
+
 const sheet = { name: 'Contact' };
+
 const Styled = withStyles(styles, sheet);
 
 const Contact = ({ classes }) => (

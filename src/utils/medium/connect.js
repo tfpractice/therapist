@@ -1,0 +1,72 @@
+import axios from 'axios';
+import medium from 'medium-sdk';
+
+import {
+  mediumAPiUrl,
+  CLIENT_ID,
+  SECRET,
+  code,
+  grant_type,
+  Authorization,
+  client,
+  scope,
+  state,
+  response_type,
+  redirect_uri,
+  headers,
+  url,
+  pubURL,
+  tokenURL,
+  meURL,
+} from './creds';
+
+const connect = () =>
+  axios
+    .get(url)
+    .then((res) => {
+      console.log('res', res);
+    })
+    .catch(e => console.error('some error', e));
+
+const getToken = (c = code) =>
+  axios
+    .post(
+      tokenURL,
+
+      {
+        headers,
+
+        params: {
+          client_id: CLIENT_ID,
+          client_secret: SECRET,
+          code,
+          grant_type,
+          redirect_uri,
+        },
+      }
+    )
+    .then(res => console.log('res``', res))
+    .catch((err) => {
+      console.log('errro');
+      console.error(err.message);
+    });
+
+export const getMe = () =>
+  axios
+    .get(meURL, { headers: { Authorization: `Bearer 2787611f89878cf9d7e68a52641c8906f810fd0d00081f9e1fbbe57806309d7f6` }})
+    .then((res) => {
+      console.log('resolveres', res);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+
+export const getPublications = () =>
+  axios
+    .get(pubURL, { headers: { ...headers, Authorization }})
+    .then(res => console.log('resolve', res))
+    .catch((err) => {
+      console.error(err);
+    });
+
+getPublications();
