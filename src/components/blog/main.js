@@ -1,8 +1,10 @@
 import React from 'react';
 import Grid from 'material-ui/Grid';
 import Fade from 'material-ui/transitions/Fade';
+import Button from 'material-ui/Button';
 import { withStyles } from 'material-ui/styles';
 
+import { getPublications, getMe } from '../../utils/medium';
 import { articles } from './content';
 import BlogCard from './link';
 
@@ -19,6 +21,7 @@ const BlogView = ({ classes }) => (
   <Fade in className={classes.blog}>
     <Grid container justify="center" spacing={24}>
       <Grid item xs={11}>
+        <Button onClick={getMe}>getPublications</Button>
         <Grid container justify="center" spacing={24}>
           {articles.map((prod, i) => (
             <Grid item xs={6} md={3} key={i}>

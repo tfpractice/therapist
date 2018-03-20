@@ -1,4 +1,3 @@
-import React from 'react';
 import { compose, withHandlers, withState } from 'recompose';
 
 const defProps = { location: '/', index: 0 };

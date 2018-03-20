@@ -4,15 +4,17 @@ import Fade from 'material-ui/transitions/Fade';
 import Swipable from 'react-swipeable-views';
 import withStyles from 'material-ui/styles/withStyles';
 import Card, {
-  CardMedia,
+
+// CardMedia,
   CardHeader,
   CardActions,
-  CardContent,
+
+  // CardContent,
 } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 
 import { send } from '../../utils';
-import { address, quote, email } from './content';
+import { quote, email } from './content';
 import Map from './map';
 
 const styles = theme => ({

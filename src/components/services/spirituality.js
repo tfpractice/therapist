@@ -4,9 +4,7 @@ import Text from 'material-ui/Typography';
 import Fade from 'material-ui/transitions/Fade';
 import { MarkdownPreview } from 'react-marked-markdown';
 import withStyles from 'material-ui/styles/withStyles';
-import Avatar from 'material-ui/Avatar';
-import { GridListTile, GridListTileBar } from 'material-ui/GridList';
-import Card, { CardMedia, CardHeader, CardContent } from 'material-ui/Card';
+import Card, { CardContent } from 'material-ui/Card';
 
 import { mkOpts } from '../../utils';
 import { spirituality, churchHurt } from './content';
@@ -27,8 +25,6 @@ const styles = theme => ({
   },
   card: { backgroundColor: 'rgba(48,48,48,0.8)' },
 });
-
-const sheet = { name: 'About' };
 
 const Styled = withStyles(styles);
 

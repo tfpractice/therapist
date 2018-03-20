@@ -1,6 +1,5 @@
 import React from 'react';
 import Grid from 'material-ui/Grid';
-import Fade from 'material-ui/transitions/Fade';
 import { Route, Switch } from 'react-router-dom';
 import { withStyles } from 'material-ui/styles';
 

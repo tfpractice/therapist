@@ -41,7 +41,7 @@ apostle.domainKey = key;
 // //
 // // console.log('sgMail', sgMail);
 
-const testMessage = `Hey Natasha,
+export const testMessage = `Hey Natasha,
 It's theory, I've hacked together a quick email solution that doesnt require
  the wild amount of server set-up that most services Require. This comes with 
  some default branding, but has been sent from your website successfully. I've

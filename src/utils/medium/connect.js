@@ -1,33 +1,43 @@
-import axios from 'axios';
-import medium from 'medium-sdk';
+import axios from 'axios-https-proxy-fix';
 
 import {
-  mediumAPiUrl,
   CLIENT_ID,
   SECRET,
   code,
   grant_type,
   Authorization,
-  client,
-  scope,
-  state,
-  response_type,
   redirect_uri,
   headers,
   url,
+  config,
   pubURL,
   tokenURL,
   meURL,
 } from './creds';
 
-const connect = () =>
-  axios
-    .get(url)
-    .then((res) => {
-      console.log('res', res);
-    })
-    .catch(e => console.error('some error', e));
+// https.globalAgent.options.secureProtocol = 'SSLv3_method';
 
+export const mConnect = () =>
+  axios
+    .get('/auth')
+    .then((res) => {
+      console.log('auth res', res);
+      return res;
+    })
+    .catch(e => console.error('some mconnect error', e));
+
+export const connect = () =>
+  axios
+    .get(url, config)
+    .then((res) => {
+      console.log('connecting');
+      return res;
+
+      // res.json({});
+    })
+    .catch(e => console.error('some connect error', e));
+
+// connect();
 const getToken = (c = code) =>
   axios
     .post(
@@ -68,5 +78,3 @@ export const getPublications = () =>
     .catch((err) => {
       console.error(err);
     });
-
-getPublications();

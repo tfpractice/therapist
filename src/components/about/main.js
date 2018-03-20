@@ -4,10 +4,9 @@ import Text from 'material-ui/Typography';
 import Fade from 'material-ui/transitions/Fade';
 import { MarkdownPreview } from 'react-marked-markdown';
 import withStyles from 'material-ui/styles/withStyles';
-import Card, { CardMedia, CardHeader, CardContent } from 'material-ui/Card';
+import Card, { CardHeader, CardContent } from 'material-ui/Card';
 
 import { mkOpts } from '../../utils';
-import Blog from '../blog';
 import { bio, quote } from './about';
 
 const styles = (theme) => {

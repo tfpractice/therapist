@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Button from 'material-ui/Button';
-import IconButton from 'material-ui/IconButton';
-import MenuIcon from 'material-ui-icons/Menu';
 import Menu, { MenuItem } from 'material-ui/Menu';
 import { withState, withHandlers, compose } from 'recompose';
 import { Link } from 'react-router-dom';
 
 const wSwitch = withState('open', 'flip', false);
+
 const wAnchor = withState('anchorEl', 'setEl', undefined);
+
 const withBoth = compose(
   wSwitch,
   wAnchor,
@@ -20,13 +20,13 @@ const withBoth = compose(
     },
   })
 );
+
 const Services = ({ open, anchorEl, toggle, onClick }) => (
   <div>
     <Button
       aria-owns={open ? 'simple-menu' : null}
       aria-haspopup="true"
-      onClick={onClick}
-    >
+      onClick={onClick}>
       Services
     </Button>
     <Menu
@@ -34,8 +34,7 @@ const Services = ({ open, anchorEl, toggle, onClick }) => (
       anchorEl={anchorEl}
       open={open}
       onRequestClose={toggle}
-      onClick={toggle}
-    >
+      onClick={toggle}>
       <MenuItem>
         <Link to="/diversity">Multiculturalism</Link>
       </MenuItem>

@@ -2,12 +2,7 @@ import React from 'react';
 import Grid from 'material-ui/Grid';
 import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 import withStyles from 'material-ui/styles/withStyles';
-import Card, {
-  CardMedia,
-  CardHeader,
-  CardActions,
-  CardContent,
-} from 'material-ui/Card';
+import { CardMedia } from 'material-ui/Card';
 
 import Tabs from './tabs';
 
