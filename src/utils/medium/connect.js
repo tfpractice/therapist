@@ -44,11 +44,14 @@ export const getToken = (c = code) =>
       tokenURL,
 
       {
-        client_id: CLIENT_ID,
-        client_secret: SECRET,
-        code,
-        grant_type,
-        redirect_uri,
+        ...config,
+        data: {
+          client_id: CLIENT_ID,
+          client_secret: SECRET,
+          code,
+          grant_type,
+          redirect_uri,
+        },
       }
     )
     .then(res => console.log('res``', res))

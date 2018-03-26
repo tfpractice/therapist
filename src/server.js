@@ -96,12 +96,9 @@ app.use(express.static(path.resolve('build')));
 app.listen(4000, () => {
   console.log('NAtahsa site listening on port 4000!');
 });
-console.log(
-  'process.env.REACT_APP_PROXY_PASS',
-  process.env.REACT_APP_PROXY_PASS
-);
+
 const options = {
-  ssl,
+  ...ssl,
   port,
 
   ecdhCurve: 'auto',
@@ -112,11 +109,9 @@ const options = {
   rejectUnauthorized: false,
 };
 
-const server = spdy
-  .createServer({ ...options, ...ssl }, app)
-  .listen(443, () => {
-    console.log('server', server);
-    console.log(`Express server listening on port ${server.address().port}`);
-  });
+const server = spdy.createServer(options, app).listen(443, () => {
+  console.log('server', server);
+  console.log(`Express server listening on port ${server.address().port}`);
+});
 
 module.exports = app;

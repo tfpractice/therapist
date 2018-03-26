@@ -47,6 +47,7 @@ export const withCredentials = 'true';
 
 export const config = {
   headers,
+
   proxy,
   auth,
 
@@ -64,9 +65,8 @@ export const scope = 'basicProfile, listPublications';
 export const state = 'test';
 
 export const response_type = 'code';
-console.log('process.env.DOMAIN', process.env.REACT_APP_DOMAIN);
-export const redirect_uri = `http://${host}:${port}/callback/medium`;
-
+export const redirect_uri = `http://${host}:${4000}/callback/medium`;
+console.log('redirect_uri', redirect_uri);
 export const access_token = `
   2787611f89878cf9d7e68a52641c8906f810fd0d00081f9e1fbbe57806309d7f6`;
 
@@ -85,7 +85,7 @@ export const url = client.getAuthorizationUrl(state, redirect_uri, [
 ]);
 
 export const authUrl = url;
-
+console.log('authUrl', authUrl);
 export const pubURL = `https://api.medium.com/v1/users/${userId}/publications`;
 
 export const tokenURL = `https://api.medium.com/v1/tokens?`;
