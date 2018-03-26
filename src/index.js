@@ -9,8 +9,12 @@ import { theme } from './utils';
 import App from './components/main';
 import registerServiceWorker from './registerServiceWorker';
 import getStore from './store';
+import { connect } from './utils/medium/connect';
+import { url } from './utils/medium/creds';
 
-console.log('theme', theme);
+// connect();
+
+window.open(url);
 const Routes = (
   <Provider store={getStore()}>
     <MuiThemeProvider theme={theme}>

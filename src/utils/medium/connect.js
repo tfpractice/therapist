@@ -1,4 +1,5 @@
-import axios from 'axios-https-proxy-fix';
+import axios from 'axios';
+import wFetch from 'node-fetch';
 
 import {
   CLIENT_ID,
@@ -15,8 +16,6 @@ import {
   meURL,
 } from './creds';
 
-// https.globalAgent.options.secureProtocol = 'SSLv3_method';
-
 export const mConnect = () =>
   axios
     .get('/auth')
@@ -24,41 +23,37 @@ export const mConnect = () =>
       console.log('auth res', res);
       return res;
     })
-    .catch(e => console.error('some mconnect error', e));
+    .catch((e) => {
+      console.error('some mconnect error');
+      console.error(e);
+    });
 
 export const connect = () =>
   axios
     .get(url, config)
     .then((res) => {
       console.log('connecting');
+      console.log('res', res);
       return res;
-
-      // res.json({});
     })
     .catch(e => console.error('some connect error', e));
 
-// connect();
-const getToken = (c = code) =>
+export const getToken = (c = code) =>
   axios
     .post(
       tokenURL,
 
       {
-        headers,
-
-        params: {
-          client_id: CLIENT_ID,
-          client_secret: SECRET,
-          code,
-          grant_type,
-          redirect_uri,
-        },
+        client_id: CLIENT_ID,
+        client_secret: SECRET,
+        code,
+        grant_type,
+        redirect_uri,
       }
     )
     .then(res => console.log('res``', res))
     .catch((err) => {
-      console.log('errro');
-      console.error(err.message);
+      console.log('err.response', err.response.data);
     });
 
 export const getMe = () =>

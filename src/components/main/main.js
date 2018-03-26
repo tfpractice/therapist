@@ -22,7 +22,7 @@ const Main = props => (
     <Grid item xs={12} className={props.classes.main}>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/callback/medium" component={Home} />
+        <Route path="/callback/medium" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/services" component={Services} />
         <Route path="/blog" component={Blog} />

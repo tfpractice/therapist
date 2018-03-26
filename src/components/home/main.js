@@ -15,6 +15,17 @@ import {
   getPublications,
   mConnect as connect,
 } from '../../utils/medium/connect';
+import { url, myClient, config } from '../../utils/medium/creds';
+
+// const connect = c1;
+
+// const connect = () =>
+//   myClient
+//     .get(url, config)
+//     .then((x) => {
+//       console.log('x', x);
+//     })
+//     .catch(console.error);
 
 const styles = theme => ({
   home: { paddingTop: '2rem' },

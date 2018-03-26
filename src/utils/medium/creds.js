@@ -1,31 +1,13 @@
-// const axios = require('axios');
-import axios from 'axios-https-proxy-fix';
+import axios from 'axios';
 import medium from 'medium-sdk';
+import * as tunnel from 'tunnel';
 
-export const headers = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Credentials': true,
-};
+export const host =
+  process.env.HOST || process.env.REACT_APP_HOST || '127.0.0.1';
 
-export const auth = {
-  username: 'root',
+const port = 443 || process.env.PORT || process.env.REACT_APP_PORT || '4000';
 
-  password: ' ',
-};
-
-export const proxy = {
-  host: '127.0.0.1',
-  port: 3000,
-  auth,
-};
-
-export const config = {
-  headers,
-  proxy,
-
-  // auth,
-};
-export const mediumAPiUrl = 'https://medium.com/m/oauth/authorize?';
+export const pxPort = process.env.REACT_APP_PROXY_PORT;
 
 export const CLIENT_ID = process.env.REACT_APP_NATASHA_EDWARDS_MEDIUM_CLIENT_ID;
 
@@ -37,13 +19,53 @@ export const client = new medium.MediumClient({
   clientSecret: SECRET,
 });
 
+export const headers = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Credentials': true,
+};
+
+export const auth = {
+  username: 'root',
+  password: ' ',
+};
+
+export const proxy = {
+  host,
+  port,
+  auth,
+};
+export const agent = tunnel.httpsOverHttp({
+  proxy: {
+    ...proxy,
+
+    // proxyAuth: 'root: ',
+  },
+  keepAlive: true,
+});
+
+export const withCredentials = 'true';
+
+export const config = {
+  headers,
+  proxy,
+  auth,
+
+  withCredentials,
+};
+
+export const myClient = axios.create({
+  ...config,
+  httpsAgent: agent,
+});
+export const mediumAPiUrl = 'https://medium.com/m/oauth/authorize?';
+
 export const scope = 'basicProfile, listPublications';
 
 export const state = 'test';
 
 export const response_type = 'code';
-
-export const redirect_uri = 'http://127.0.0.1:3000/callback/medium ';
+console.log('process.env.DOMAIN', process.env.REACT_APP_DOMAIN);
+export const redirect_uri = `http://${host}:${port}/callback/medium`;
 
 export const access_token = `
   2787611f89878cf9d7e68a52641c8906f810fd0d00081f9e1fbbe57806309d7f6`;
@@ -62,14 +84,14 @@ export const url = client.getAuthorizationUrl(state, redirect_uri, [
   medium.Scope.LIST_PUBLICATIONS,
 ]);
 
+export const authUrl = url;
+
 export const pubURL = `https://api.medium.com/v1/users/${userId}/publications`;
 
 export const tokenURL = `https://api.medium.com/v1/tokens?`;
 export const meURL = `https://api.medium.com/v1/me`;
 
 export const grant_type = 'authorization_code';
-
-export const withCredentials = 'true';
 
 export const code = 'c4231a31ee41';
 
@@ -104,3 +126,6 @@ export const userRes = {
     imageUrl: '',
   },
 };
+
+const chromescriitps = `
+  open -na Google\ Chrome --args --allow-file-access-from-files --allow-file-access --allow-cross-origin-auth-prompt--disable-web-security --user-data-dir=/Users/jacksonbrebnor/data-dir`;
