@@ -7,7 +7,7 @@ import { MuiThemeProvider } from 'material-ui/styles';
 import './index.css';
 import { theme } from './utils';
 import App from './components/main';
-import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker, { unregister } from './registerServiceWorker';
 import getStore from './store';
 import { connect } from './utils/medium/connect';
 import { url } from './utils/medium/creds';
@@ -26,4 +26,6 @@ const Routes = (
 );
 
 render(Routes, document.getElementById('root'));
-registerServiceWorker();
+
+// registerServiceWorker();
+// unregister();
