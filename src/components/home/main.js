@@ -1,40 +1,40 @@
-import React from 'react';
-import Grid from 'material-ui/Grid';
-import Text from 'material-ui/Typography';
-import Fade from 'material-ui/transitions/Fade';
-import { MarkdownPreview } from 'react-marked-markdown';
-import { GridListTile, GridListTileBar } from 'material-ui/GridList';
-import withStyles from 'material-ui/styles/withStyles';
 import Avatar from 'material-ui/Avatar';
-import Card, { CardMedia, CardHeader, CardContent } from 'material-ui/Card';
+import Card, { CardContent, CardHeader, CardMedia } from 'material-ui/Card';
+import Fade from 'material-ui/transitions/Fade';
+import Grid from 'material-ui/Grid';
+import React from 'react';
+import Text from 'material-ui/Typography';
+import withStyles from 'material-ui/styles/withStyles';
+import { GridListTile, GridListTileBar } from 'material-ui/GridList';
+import { MarkdownPreview } from 'react-marked-markdown';
 
+import { mission, sartre } from './home';
 import { mkOpts } from '../../utils';
-import { sartre, mainQuote, mission } from './home';
 
 const styles = theme => ({
-  home: { paddingTop: '2rem' },
-  bar: { backgroundColor: '#607d8bdd' },
+  home: { paddingTop: `2rem` },
+  bar: { backgroundColor: `#607d8bdd` },
 
   image: {
-    height: '20rem',
-    maxHeight: '20rem',
-    backgroundPosition: 'center',
+    height: `20rem`,
+    maxHeight: `20rem`,
+    backgroundPosition: `center`,
   },
-  item: { listStyle: 'none' },
+  item: { listStyle: `none` },
 
   media: {
-    backgroundColor: 'transparent',
-    height: '20rem',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
+    backgroundColor: `transparent`,
+    height: `20rem`,
+    backgroundSize: `cover`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPosition: `center`,
 
     // '&:hover': { backgroundSize: 'cover' },
   },
-  card: { backgroundColor: 'rgba(48,48,48,0.8)' },
+  card: { backgroundColor: `rgba(48,48,48,0.8)` },
 });
 
-const sheet = { name: 'About' };
+const sheet = { name: `About` };
 
 const Styled = withStyles(styles, sheet);
 
@@ -43,7 +43,8 @@ const Home = ({ classes }) => (
     container
     justify="center"
     alignContent="center"
-    className={classes.home}>
+    className={classes.home}
+  >
     <Grid item xs={11}>
       <Card className={classes.card}>
         <CardHeader
@@ -64,7 +65,8 @@ const Home = ({ classes }) => (
                 align="center"
                 component={CardContent}
                 variant="title"
-                color="textSecondary">
+                color="textSecondary"
+              >
                 <MarkdownPreview value={sartre} {...mkOpts} />
               </Text>
             }
@@ -77,7 +79,8 @@ const Home = ({ classes }) => (
               <Text
                 component={CardContent}
                 variant="subheading"
-                color="textSecondary">
+                color="textSecondary"
+              >
                 <MarkdownPreview value={mission} {...mkOpts} />
               </Text>
             </Grid>

@@ -1,13 +1,11 @@
 import React from 'react';
-import Grid from 'material-ui/Grid';
-import Fade from 'material-ui/transitions/Fade';
 import Text from 'material-ui/Typography';
-import { MarkdownPreview } from 'react-marked-markdown';
 import withStyles from 'material-ui/styles/withStyles';
-import Card, { CardHeader, CardContent } from 'material-ui/Card';
+import { CardContent, CardHeader } from 'material-ui/Card';
+import { MarkdownPreview } from 'react-marked-markdown';
 
-import { mkOpts } from '../../utils';
 import { Expand } from '../misc';
+import { mkOpts } from '../../utils';
 
 const styles = theme => ({ card: { backgroundColor: theme.cardBack }});
 
