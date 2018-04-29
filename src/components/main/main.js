@@ -1,19 +1,19 @@
-import React from 'react';
-import Grid from 'material-ui/Grid';
 import Fade from 'material-ui/transitions/Fade';
+import Grid from 'material-ui/Grid';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { withStyles } from 'material-ui/styles';
 
-import Home from '../home';
 import About from '../about';
-import Contact from '../contact';
-import Services from '../services';
 import Blog from '../blog';
+import Contact from '../contact';
+import Home from '../home';
 import Nav from './nav';
+import Services from '../services';
 
-const mainStyles = theme => ({ main: { marginTop: '3rem' }});
+const mainStyles = theme => ({ main: { marginTop: `3rem` }});
 
-const Styled = withStyles(mainStyles, { name: 'Home' });
+const Styled = withStyles(mainStyles, { name: `Home` });
 
 const Main = props => (
   <Grid container justify="center" alignContent="center">
