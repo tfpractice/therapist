@@ -1,29 +1,26 @@
-import React from 'react';
-import Grid from 'material-ui/Grid';
+import Button from 'material-ui/Button';
+import Card, { CardActions, CardHeader } from 'material-ui/Card';
 import Fade from 'material-ui/transitions/Fade';
+import Grid from 'material-ui/Grid';
+import React from 'react';
 import Swipable from 'react-swipeable-views';
 import withStyles from 'material-ui/styles/withStyles';
-import Card, {
-  CardMedia,
-  CardHeader,
-  CardActions,
-  CardContent,
-} from 'material-ui/Card';
-import Button from 'material-ui/Button';
 
-import { send } from '../../utils';
-import { address, quote, email } from './content';
 import Map from './map';
+import { email, quote } from './content';
+import { send } from '../../utils';
 
 const styles = theme => ({
   image: {
-    height: '20rem',
-    maxHeight: '20rem',
-    backgroundPosition: 'center',
+    height: `20rem`,
+    maxHeight: `20rem`,
+    backgroundPosition: `center`,
   },
   card: { backgroundColor: theme.cardBack },
 });
-const sheet = { name: 'Contact' };
+
+const sheet = { name: `Contact` };
+
 const Styled = withStyles(styles, sheet);
 
 const Contact = ({ classes }) => (

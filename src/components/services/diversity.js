@@ -1,23 +1,22 @@
-import React from 'react';
-import Grid from 'material-ui/Grid';
+import Card, { CardContent } from 'material-ui/Card';
 import Fade from 'material-ui/transitions/Fade';
+import Grid from 'material-ui/Grid';
+import React from 'react';
 import Text from 'material-ui/Typography';
-import { MarkdownPreview } from 'react-marked-markdown';
 import withStyles from 'material-ui/styles/withStyles';
-import { GridListTile, GridListTileBar } from 'material-ui/GridList';
-import Card, { CardMedia, CardContent } from 'material-ui/Card';
+import { MarkdownPreview } from 'react-marked-markdown';
 
-import { mkOpts } from '../../utils';
 import { diversity } from './content';
+import { mkOpts } from '../../utils';
 
 const styles = theme => ({
   image: {
-    height: '20rem',
-    maxHeight: '20rem',
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
+    height: `20rem`,
+    maxHeight: `20rem`,
+    backgroundPosition: `center`,
+    backgroundSize: `cover`,
   },
-  item: { listStyle: 'none' },
+  item: { listStyle: `none` },
 
   card: { backgroundColor: theme.cardBack },
 });

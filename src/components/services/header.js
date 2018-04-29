@@ -1,28 +1,23 @@
-import React from 'react';
 import Grid from 'material-ui/Grid';
-import { GridListTile, GridListTileBar } from 'material-ui/GridList';
+import React from 'react';
 import withStyles from 'material-ui/styles/withStyles';
-import Card, {
-  CardMedia,
-  CardHeader,
-  CardActions,
-  CardContent,
-} from 'material-ui/Card';
+import { CardMedia } from 'material-ui/Card';
+import { GridListTile, GridListTileBar } from 'material-ui/GridList';
 
 import Tabs from './tabs';
 
-const images = [ '/images/lily.jpg', '/images/tree.jpg', '/images/bigSky.jpg' ];
+const images = [ `/images/lily.jpg`, `/images/tree.jpg`, `/images/bigSky.jpg` ];
 
 const styles = theme => ({
   image: {
-    height: '20rem',
-    maxHeight: '20rem',
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
+    height: `20rem`,
+    maxHeight: `20rem`,
+    backgroundPosition: `center`,
+    backgroundSize: `cover`,
   },
-  bar: { paddingBottom: '0.5rem', backgroundColor: '#607d8bdd' },
+  bar: { paddingBottom: `0.5rem`, backgroundColor: `#607d8bdd` },
 
-  item: { listStyle: 'none' },
+  item: { listStyle: `none` },
   card: { backgroundColor: theme.cardBack },
 });
 

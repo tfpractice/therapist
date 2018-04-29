@@ -1,34 +1,32 @@
-import React from 'react';
-import Grid from 'material-ui/Grid';
-import Text from 'material-ui/Typography';
+import Card, { CardContent } from 'material-ui/Card';
 import Fade from 'material-ui/transitions/Fade';
-import { MarkdownPreview } from 'react-marked-markdown';
+import Grid from 'material-ui/Grid';
+import React from 'react';
+import Text from 'material-ui/Typography';
 import withStyles from 'material-ui/styles/withStyles';
-import Avatar from 'material-ui/Avatar';
-import { GridListTile, GridListTileBar } from 'material-ui/GridList';
-import Card, { CardMedia, CardHeader, CardContent } from 'material-ui/Card';
+import { MarkdownPreview } from 'react-marked-markdown';
 
+import { churchHurt, spirituality } from './content';
 import { mkOpts } from '../../utils';
-import { spirituality, churchHurt } from './content';
 
 const styles = theme => ({
   image: {
-    height: '20rem',
-    maxHeight: '20rem',
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
+    height: `20rem`,
+    maxHeight: `20rem`,
+    backgroundPosition: `center`,
+    backgroundSize: `cover`,
   },
-  item: { listStyle: 'none' },
+  item: { listStyle: `none` },
 
   container: {
     backgroundImage: `url('/images/bigSky.jpg')`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
+    backgroundPosition: `center`,
+    backgroundSize: `cover`,
   },
-  card: { backgroundColor: 'rgba(48,48,48,0.8)' },
+  card: { backgroundColor: `rgba(48,48,48,0.8)` },
 });
 
-const sheet = { name: 'About' };
+const sheet = { name: `About` };
 
 const Styled = withStyles(styles);
 
@@ -43,7 +41,8 @@ const Spirituality = ({ classes }) => (
                 <Text
                   type="headline"
                   component={CardContent}
-                  color="textSecondary">
+                  color="textSecondary"
+                >
                   <MarkdownPreview value={spirituality} {...mkOpts} />
                 </Text>
               </Card>
@@ -55,7 +54,8 @@ const Spirituality = ({ classes }) => (
                   type="headline"
                   component={CardContent}
                   align="justify"
-                  color="textSecondary">
+                  color="textSecondary"
+                >
                   <MarkdownPreview value={churchHurt} {...mkOpts} />
                 </Text>
               </Card>

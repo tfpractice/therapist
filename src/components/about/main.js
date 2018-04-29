@@ -1,25 +1,24 @@
-import React from 'react';
-import Grid from 'material-ui/Grid';
-import Text from 'material-ui/Typography';
+import Card, { CardContent, CardHeader } from 'material-ui/Card';
 import Fade from 'material-ui/transitions/Fade';
-import { MarkdownPreview } from 'react-marked-markdown';
+import Grid from 'material-ui/Grid';
+import React from 'react';
+import Text from 'material-ui/Typography';
 import withStyles from 'material-ui/styles/withStyles';
-import Card, { CardMedia, CardHeader, CardContent } from 'material-ui/Card';
+import { MarkdownPreview } from 'react-marked-markdown';
 
-import { mkOpts } from '../../utils';
-import Blog from '../blog';
 import { bio, quote } from './about';
+import { mkOpts } from '../../utils';
 
-const styles = (theme) => {
-  console.log('theme', theme);
+const styles = theme => {
+  console.log(`theme`, theme);
   return {
-    about: { paddingTop: '2rem' },
-    image: { maxWidth: '90%' },
+    about: { paddingTop: `2rem` },
+    image: { maxWidth: `90%` },
     card: { backgroundColor: theme.cardBack },
   };
 };
 
-const sheet = { name: 'About' };
+const sheet = { name: `About` };
 
 const Styled = withStyles(styles, sheet);
 
@@ -30,7 +29,8 @@ const About = ({ classes }) => (
       className={classes.about}
       justify="center"
       alignContent="center"
-      alignItems="center">
+      alignItems="center"
+    >
       <Grid item xs={11}>
         <Card className={classes.card}>
           <CardContent>
@@ -39,7 +39,8 @@ const About = ({ classes }) => (
               justify="center"
               alignContent="center"
               spacing={8}
-              alignItems="center">
+              alignItems="center"
+            >
               <Grid item xs={11} sm={4}>
                 <img className={classes.image} src="/images/headshot.jpg" />
               </Grid>
@@ -50,7 +51,8 @@ const About = ({ classes }) => (
                 <Text
                   component={CardContent}
                   variant="subheading"
-                  color="textSecondary">
+                  color="textSecondary"
+                >
                   <MarkdownPreview value={bio} {...mkOpts} />
                 </Text>
                 <CardHeader
