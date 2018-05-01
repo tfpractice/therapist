@@ -2,6 +2,7 @@ import apostle from 'apostle.io';
 
 const key = process.env.REACT_APP_NEDWARDS_APOSTLE_KEY;
 
+console.log(`key`, key);
 apostle.domainKey = key;
 
 // // const sgMail = require('@sendgrid/mail');
@@ -60,7 +61,7 @@ contact page and click send. Dont do it too much, tho, becuase it'll just send
 `;
 
 export const send = msg =>
-  apostle.deliver('welcome', { email: 'jackson.brebnor@gmail.com' });
+  apostle.deliver(`welcome`, { email: `jackson.brebnor@gmail.com` });
 
 // sgMail.send(msg);
 //

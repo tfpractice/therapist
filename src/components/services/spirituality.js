@@ -32,11 +32,11 @@ const Styled = withStyles(styles);
 
 const Spirituality = ({ classes }) => (
   <Fade in>
-    <Grid container justify="center" alignContent="center">
+    <Grid container justify="center" alignContent="center" spacing={40}>
       <Grid item xs={11}>
         <CardContent>
-          <Grid container justify="center">
-            <Grid item sm={12} md={6}>
+          <Grid container justify="center" spacing={40}>
+            <Grid item sm={12}>
               <Card className={classes.card}>
                 <Text
                   type="headline"
@@ -48,7 +48,7 @@ const Spirituality = ({ classes }) => (
               </Card>
             </Grid>
 
-            <Grid item sm={12} md={6}>
+            <Grid item sm={12}>
               <Card className={classes.card}>
                 <Text
                   type="headline"
