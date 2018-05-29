@@ -8,10 +8,14 @@ import Tabs from './tabs';
 
 const images = [ `/images/lily.jpg`, `/images/tree.jpg`, `/images/bigSky.jpg` ];
 
+const imgStyle = i =>
+  i === `/images/lily.jpg`
+    ? { objectFit: `fill`, transform: `rotate(90deg)` }
+    : {};
+
 const styles = theme => ({
   image: {
     height: `20rem`,
-    maxHeight: `20rem`,
     backgroundPosition: `center`,
     backgroundSize: `cover`,
   },

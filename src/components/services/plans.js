@@ -22,7 +22,7 @@ const Styled = withStyles(styles);
 const Services = ({ classes }) => (
   <Grid container justify="center" alignContent="center">
     <Grid item xs={11}>
-      <Grid container justify="center">
+      <Grid container justify="center" spacing={40}>
         {services.map(s => (
           <Grid item xs={11} md={6} lg={4} key={s.sub}>
             <ServCard {...s} />

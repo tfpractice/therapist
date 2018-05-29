@@ -37,9 +37,10 @@ const Contact = ({ classes }) => (
             </Grid>
           </Grid>
 
-          <CardHeader title={email} />
           <CardActions>
-            <Button onClick={() => send()}>SEND MAIL</Button>
+            <Button href={`mailto:${email}`} onClick={() => send()}>
+              {email}
+            </Button>
           </CardActions>
         </Card>
       </Grid>
