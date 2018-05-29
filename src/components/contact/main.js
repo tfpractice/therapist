@@ -8,7 +8,6 @@ import withStyles from 'material-ui/styles/withStyles';
 
 import Map from './map';
 import { email, quote } from './content';
-import { send } from '../../utils';
 
 const styles = theme => ({
   image: {
@@ -38,9 +37,7 @@ const Contact = ({ classes }) => (
           </Grid>
 
           <CardActions>
-            <Button href={`mailto:${email}`} onClick={() => send()}>
-              {email}
-            </Button>
+            <Button href={`mailto:${email}`}>{email}</Button>
           </CardActions>
         </Card>
       </Grid>
