@@ -2,7 +2,6 @@ import apostle from 'apostle.io';
 
 const key = process.env.REACT_APP_NEDWARDS_APOSTLE_KEY;
 
-console.log(`key`, key);
 apostle.domainKey = key;
 
 // // const sgMail = require('@sendgrid/mail');

@@ -9,14 +9,11 @@ import { MarkdownPreview } from 'react-marked-markdown';
 import { bio, quote } from './about';
 import { mkOpts } from '../../utils';
 
-const styles = theme => {
-  console.log(`theme`, theme);
-  return {
-    about: { paddingTop: `2rem` },
-    image: { maxWidth: `90%` },
-    card: { backgroundColor: theme.cardBack },
-  };
-};
+const styles = theme => ({
+  about: { paddingTop: `2rem` },
+  image: { maxWidth: `90%` },
+  card: { backgroundColor: theme.cardBack },
+});
 
 const sheet = { name: `About` };
 

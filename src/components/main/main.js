@@ -5,7 +5,6 @@ import { Route, Switch } from 'react-router-dom';
 import { withStyles } from 'material-ui/styles';
 
 import About from '../about';
-import Blog from '../blog';
 import Contact from '../contact';
 import Home from '../home';
 import Nav from './nav';
@@ -25,7 +24,6 @@ const Main = props => (
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/services" component={Services} />
-        <Route path="/blog" component={Blog} />
         <Route path="/contact" component={Contact} />
       </Switch>
     </Grid>
