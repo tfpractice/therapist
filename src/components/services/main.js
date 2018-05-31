@@ -8,27 +8,26 @@ import Diversity from './diversity';
 import Header from './header';
 import Plans from './plans';
 import Spirituality from './spirituality';
-import { withIndex } from '../wrappers';
+import {withIndex} from '../wrappers';
 
 const styles = theme => ({
+  header: {marginTop: `1rem`},
   image: {
     height: `20rem`,
     maxHeight: `20rem`,
     backgroundPosition: `center`,
     backgroundSize: `cover`,
   },
-  item: { listStyle: `none` },
-  card: { backgroundColor: theme.cardBack },
+  item: {listStyle: `none`},
+  card: {backgroundColor: theme.cardBack},
 });
 
 const Styled = withStyles(styles);
 
-const Services = ({
-  classes, index, set, changeSet, ...props
-}) => (
+const Services = ({classes, index, set, changeSet, ...props}) => (
   <Fade in>
     <Grid container justify="center" alignContent="center" spacing={40}>
-      <Grid item xs={12}>
+      <Grid item xs={12} className={classes.header}>
         <Header index={index} set={set} onChange={changeSet} />
       </Grid>
       <Grid item xs={11}>
