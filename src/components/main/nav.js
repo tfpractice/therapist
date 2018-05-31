@@ -1,30 +1,28 @@
 import AppBar from 'material-ui/AppBar';
 import Grid from 'material-ui/Grid';
 import React from 'react';
-import Tabs, { Tab } from 'material-ui/Tabs';
+import Tabs, {Tab} from 'material-ui/Tabs';
 import Toolbar from 'material-ui/Toolbar';
 import withStyles from 'material-ui/styles/withStyles';
-import { Link, withRouter } from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 
-import { links } from './links';
-import { withIndex } from '../wrappers';
+import {links} from './links';
+import {withIndex} from '../wrappers';
 
-const styles = theme => ({ bar: { backgroundColor: `#607d8bcc` }});
+const styles = theme => ({bar: {backgroundColor: `#607d8bcc`}});
 
 const Styled = withStyles(styles);
 
-const defProps = { location: `/`, index: 0 };
+const defProps = {location: `/`, index: 0};
 
-const TabNav = ({
-  index, hPush, set, match, location, ...rest
-} = defProps) => (
+const TabNav = ({index, hPush, set, match, location, ...rest} = defProps) => (
   <AppBar className={rest.classes.bar}>
     <Toolbar>
       <Grid container justify="center" alignContent="center">
         <Tabs
-          centered
+          // centered
           value={index}
-
+          scrollable
           // scrollButtons="on"
           textColor="secondary"
           indicatorColor="secondary"
